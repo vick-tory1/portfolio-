@@ -191,6 +191,19 @@ h1 {
     background-position: center;
 }
 
+.real-estate{
+    width: 400px;
+    height: 400px;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+    background-image: url("images/Screenshot\ \(75\).png");
+    margin: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+
 .text {
     position: absolute;
     height: 65px;
