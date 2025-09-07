@@ -1,0 +1,96 @@
+body{
+    background-color: black;
+    font-family: roboto;
+}
+
+#container{
+    width: 1000px;
+    height: 600px;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(tiger.jpg);
+    background-size: cover;
+    margin: 50px auto;
+    border-radius: 25px;
+}
+
+#calculator{
+    width: 320px;
+    height: 520px;
+    background-color: #f6f6f6d6;
+    margin: 40px auto;
+    top: 4opx;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 4px 8px 0 rgba(0,0,0,0.6);
+}
+
+#result{
+  height: 120px;
+}
+
+#keypad{
+  height: 400px;
+}
+
+#history{
+  height: 20px;
+  text-align: right;
+  margin: 0 20px;
+  padding-top: 20px;
+  font-size: 15px;
+  color: #5c5c5c;
+}
+
+#output{
+  text-align: right;
+  height: 60px;
+  margin: 10px 20px;
+  font-size: 30px;
+  color: #232323;
+}
+
+.operator, .number, .empty{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    float: left;
+    border-width: 0;
+    border-radius: 50%;
+}
+
+.number, .empty{
+  background-color: #f6f6f600;
+}
+
+.operator:active, .number:active{
+  font-size: 12px;
+}
+
+.operator, .number{
+  cursor: pointer;
+}
+
+button:nth-child(4){
+  background-color: #00aeff;
+  font-size: 18px;
+}
+
+button:nth-child(8){
+  background-color: #00ff77;
+  font-size: 18px;
+}
+
+button:nth-child(12){
+  background-color: #99ff00;
+  font-size: 18px;
+}
+
+button:nth-child(16){
+  background-color: #ff8c00;
+  font-size: 18px;
+}
+
+button:nth-child(20){
+  background-color: #5b0000;
+  color: fefefe;
+  font-size: 18px;
+}
