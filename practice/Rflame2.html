@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainbow Flame</title>
+  <style>
+    body{
+      background: black;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+    }
+
+    .container{
+      width: 60px;
+      height: 60px;
+      position: relative;
+      animation: flicker 120ms infinite alternate;
+    }
+
+    .flame{
+      position: absolute;
+      bottom: 0;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      border-top-left-radius: 50%;
+      transform: rotate(-45deg);
+    }
+
+    /* 🌈 RAINBOW FLAME COLORS */
+    .red{
+      width: 55px;
+      height: 55px;
+      left: 4px;
+      background: #ff0000;
+      box-shadow: 0 0 30px 12px #ff0000;
+    }
+
+    .orange{
+      width: 45px;
+      height: 45px;
+      left: 10px;
+      background: #ff7f00;
+      box-shadow: 0 0 25px 10px #ff7f00;
+    }
+
+    .yellow{
+      width: 35px;
+      height: 35px;
+      left: 15px;
+      background: #ffff00;
+      box-shadow: 0 0 20px 10px #5a5a14;
+    }
+
+    .green{
+      width: 25px;
+      height: 25px;
+      left: 20px;
+      bottom: 4px;
+      background: #00ff00;
+      box-shadow: 0 0 18px 10px #00ff00;
+    }
+
+    .blue{
+      width: 18px;
+      height: 18px;
+      left: 22px;
+      bottom: -15px;
+      background: #0000ff;
+      box-shadow: 0 0 20px 10px #0000ff;
+    }
+
+    .indigo{
+      width: 12px;
+      height: 12px;
+      left: 24px;
+      bottom: -35px;
+      background: #4b0082;
+      box-shadow: 0 0 20px 12px #4b0082;
+      border-radius: 50%;
+    }
+
+    .violet{
+      width: 20px;
+      height: 20px;
+      left: 20px;
+      bottom: -55px;
+      background: #8a2be2;
+      box-shadow: 0 0 25px 14px #8a2be2;
+      border-radius: 50%;
+    }
+
+    @keyframes flicker {
+      0% { transform: rotate(-2deg) scaleY(1.02); }
+      25% { transform: rotate(1deg) scaleY(0.99); }
+      50% { transform: rotate(-1deg) scaleY(1.04); }
+      75% { transform: rotate(2deg) scaleY(0.97); }
+      100% { transform: rotate(-1deg) scaleY(1.03); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 🌈 RAINBOW FLAMES IN ORDER -->
+    <div class="red flame"></div>
+    <div class="orange flame"></div>
+    <div class="yellow flame"></div>
+    <div class="green flame"></div>
+
+    <div class="blue"></div>
+    <div class="indigo"></div>
+    <div class="violet"></div>
+
+  </div>
+</body>
+</html>
