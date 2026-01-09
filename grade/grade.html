@@ -1,30 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <style>
-    body{
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background-image: url(bg2.jpg);
-      background-attachment: fixed;
-      background-position: center;
-    }
-  </style>
-</head>
-<body>
-  <div class="container p-5 mt-5 bg-light border border-1 border-secondary rounded-3 shadow" style="width: 500px;">
-    <h2>Check your Grade</h2>
-    <input type="text" class="form-control mb-2" placeholder="enter your score" id="score">
-    <button class="btn btn-dark" onclick="getGrade()">Check your grade</button>
-    <h1 id="yourGrade">Your Grade</h1>
-  </div>
-  <button><a href="portfolio/index.html">Back To Portfolio</a></button>
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grade Checker — Landing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+      :root{--accent:#2b6cb0}
+      body{font-family:Inter,system-ui,Arial,sans-serif;background:#f7fbff;margin:0;padding-bottom:40px}
+      .hero{background:linear-gradient(90deg,rgba(43,108,176,0.12),rgba(43,108,176,0.02));padding:80px 0}
+      .brand{font-weight:700;color:var(--accent);letter-spacing:.5px}
+      .card-calc{max-width:520px;margin:auto}
+      .grade-result{font-size:2.25rem;font-weight:700}
+      .scale-item{border-radius:8px;padding:10px}
+      a.back-btn{position:fixed;bottom:448px;left:16px;background:#222;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;z-index:9999;font-family:sans-serif;display:flex;align-items:center;justify-content:center}
+      @media (max-width:576px){.hero{padding:40px 0}.grade-result{font-size:1.5rem}}
+    </style>
+  </head>
+  <body>
+    <a class="back-btn" href="../index.html">← Back to Portfolio</a>
+
+    <header class="container">
+      <nav class="d-flex align-items-center justify-content-between py-3">
+        <div class="d-flex align-items-center gap-3">
+          <div class="brand">GradeLab</div>
+          <div class="text-muted">Simple grading tools for students & teachers</div>
+        </div>
+        <div>
+          <a class="btn btn-sm btn-outline-primary" href="#calculator">Try Calculator</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <h1 class="display-6">Fast, reliable grade checking</h1>
+            <p class="lead text-muted">Enter your score to instantly see the letter grade. Designed for easy use in classrooms and study sessions.</p>
+            <ul class="mb-3">
+              <li>Works with numeric scores (0–100)</li>
+              <li>Shows letter grade and color-coded result</li>
+              <li>Responsive and lightweight</li>
+            </ul>
+            <a href="#calculator" class="btn btn-primary">Check Your Grade</a>
+          </div>
+          <div class="col-lg-6">
+            <div id="calculator" class="card shadow-sm card-calc">
+              <div class="card-body">
+                <h5 class="card-title">Grade Calculator</h5>
+                <p class="text-muted small">Type your numeric score (0–100) and click <strong>Check</strong>.</p>
+                <div class="mb-3">
+                  <input id="score" type="number" min="0" max="100" class="form-control" placeholder="Enter your score">
+                </div>
+                <div class="d-flex gap-2 mb-3">
+                  <button class="btn btn-outline-secondary" onclick="document.getElementById('score').value='';document.getElementById('yourGrade').innerText='Your Grade';document.getElementById('yourGrade').style.color='';">Reset</button>
+                  <button class="btn btn-primary" onclick="getGrade()">Check</button>
+                </div>
+                <div class="text-center">
+                  <div id="yourGrade" class="grade-result">Your Grade</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-5">
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h3>Grading Scale</h3>
+          <div class="row g-2">
+            <div class="col-6 scale-item bg-white border">75–100 : <strong>A+</strong></div>
+            <div class="col-6 scale-item bg-white border">65–74 : <strong>A</strong></div>
+            <div class="col-6 scale-item bg-white border">55–64 : <strong>B</strong></div>
+            <div class="col-6 scale-item bg-white border">50–54 : <strong>C</strong></div>
+            <div class="col-6 scale-item bg-white border">45–49 : <strong>D</strong></div>
+            <div class="col-6 scale-item bg-white border">40–44 : <strong>E</strong></div>
+            <div class="col-12 scale-item bg-white border">0–39 : <strong>F</strong></div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+          <h3>How it works</h3>
+          <p class="text-muted">This tool maps numeric scores to letter grades using a common school scale. Enter a score and press Check — the result appears instantly. You can customize the thresholds in <code>app.js</code>.</p>
+          <h5 class="mt-3">For Teachers</h5>
+          <ul>
+            <li>Quick spot checks during grading</li>
+            <li>Use as a reference for rubrics</li>
+            <li>Lightweight and offline-ready</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container text-center mt-5 text-muted small">
+      <p>&copy; 2026 GradeLab — Built By Tory Adams for learning</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
 </html>

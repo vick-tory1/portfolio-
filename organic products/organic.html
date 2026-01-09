@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Complete Responsive Grocery Website Design Tutorial </title>
+  <title>Complete Responsive Grocery Website Design Tutorial</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a href="../index.html" style="position:fixed;top:16px;left:16px;background:#222;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;z-index:9999;font-family: sans-serif; margin-top: 0; margin-left: -15px; width: auto; height: 50px; display:flex;justify-content:center;align-items:center;text-align:center;">← Back to Portfolio</a>
 
   <!--header section starts-->
 
@@ -138,7 +139,7 @@
     <div class="swiper product-slider">
       <div class="swiper-wrapper">
 
-        <div class="swiper-slide box">
+        <div class="box swiper-slide">
           <img src="images/orange.jpeg" alt="">
           <h3>fresh orange</h3>
           <div class="price"> $4.99/- - 10.99/- </div>
@@ -295,36 +296,46 @@
 <section class="categories" id="categories">
 
   <h1 class="heading"> product <span>categories</span></h1>
-  <div class="box-container">
+  <div class="swiper review-slider category-slider">
+    <div class="swiper-wrapper">
 
-    <div class="box">
+    <div class="swiper-slide box">
       <img src="images/vegetables-removebg-preview.png" alt="">
       <h3>vegetables</h3>
       <p>upto 45% off</p>
       <a href="#" class="btn">shop now</a>
     </div>
 
-    <div class="box">
+    <div class="swiper-slide box">
       <img src="images/fresh_fr-removebg-preview.png" alt="">
       <h3>fresh fruits</h3>
       <p>upto 45% off</p>
       <a href="#" class="btn">shop now</a>
     </div>
 
-    <div class="box">
+    <div class="swiper-slide box">
       <img src="images/download__13_-removebg-preview.png" alt="">
       <h3>dairy products</h3>
       <p>upto 45% off</p>
       <a href="#" class="btn">shop now</a>
     </div>
 
-    <div class="box">
-      <img src="images/fresh_meat_whyte-removebg-preview.png" alt="">
-      <h3>fresh meat</h3>
+    
+
+    <div class="swiper-slide box">
+      <img src="images/orange.jpeg" alt="">
+      <h3>dairy products</h3>
       <p>upto 45% off</p>
       <a href="#" class="btn">shop now</a>
     </div>
 
+    <div class="swiper-slide box">
+      <img src="images/fresh_meat-removebg-preview.png" alt="">
+      <h3>fresh meat</h3>
+      <p>upto 45% off</p>
+      <a href="#" class="btn">shop now</a>
+    </div>
+    </div>
   </div>
 </section>
 <!--Categories section ends -->

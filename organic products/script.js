@@ -63,6 +63,8 @@ window.onscroll = () => {
       },
     });
 
+    // category slider will be initialized by the product-slider selector when using the shared `product-slider` class
+
     var swiper = new Swiper(".review-slider", {
       loop: true,
       spaceBetween: 20,

@@ -20,7 +20,8 @@ nav {
     justify-content: center;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    height: 70px;
+    z-index: 10000;
 
 }
 
@@ -150,6 +151,19 @@ h1 {
     background-size: cover;
     background-position: center;
 }
+
+.ecom{
+    width: 400px;
+    height: 400px;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+    background-image: url("images/IMG-20250902-WA0006.jpg");
+    margin: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
 
 .grad{
     width: 400px;

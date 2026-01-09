@@ -148,10 +148,23 @@
   </style>
 </head>
 <body>
+  <a href="../index.html" style="position:fixed;top:16px;left:16px;background:#222;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;z-index:9999;font-family: sans-serif;">← Back to Portfolio</a>
 <h1 style="color: whitesmoke;">🌈LOVE IS LOVE🌈</h1>
 
-  <div class="container">
+  <!-- informational overlay: added without touching existing animation classes -->
+  <div class="info-card" aria-hidden="false">
+    <h2>Rainbow Flame Demo</h2>
+    <p>A layered, CSS-driven flame that uses colored shapes, blur, and keyframe motion to create a warm, animated effect. Ideal as a decorative hero or visual accent.</p>
+    <ul>
+      <li>Pure CSS layers — no images</li>
+      <li>Lightweight and GPU-friendly</li>
+      <li>Customizable colors and timing</li>
+    </ul>
+    <p style="margin-top:8px"><a href="#" style="color: #ffd1ee; text-decoration:underline">Use this effect</a></p>
+  </div>
 
+  <div class="container">
+    
     <div class="red flame"></div>
     <div class="orange flame"></div>
     <div class="yellow flame"></div>
@@ -169,5 +182,28 @@
 
   </div>
   <div class="stick"></div>
+  
+  <style>
+    /* overlay card — intentionally separate from animation rules */
+    .info-card{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      max-width: 320px;
+      background: rgba(255,255,255,0.04);
+      color: whitesmoke;
+      padding: 14px 16px;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+      backdrop-filter: blur(6px) saturate(120%);
+      font-family: Inter, system-ui, Arial, sans-serif;
+      z-index: 50;
+      line-height:1.3;
+    }
+    .info-card h2{font-size:16px;margin:0 0 6px}
+    .info-card p{margin:0 0 8px;color:#f1e6f7;font-size:13px}
+    .info-card ul{margin:6px 0 0;padding-left:18px;color:#ffdfea}
+    @media (max-width:640px){.info-card{display:none}}
+  </style>
 </body>
 </html>

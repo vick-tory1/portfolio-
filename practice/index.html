@@ -147,7 +147,9 @@ ul li:hover:nth-child(4) a:after {
 
 </style>
 <body>
+    <a href="../index.html" style="position:fixed;top:16px;left:16px;background:#222;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;z-index:9999;font-family: sans-serif;">← Back to Portfolio</a>
 
+    
     <ul class="social">
         <li>
             <a href="#">
@@ -173,5 +175,12 @@ ul li:hover:nth-child(4) a:after {
             </a>
         </li>
     </ul>
+    
+    <!-- descriptive overlay (keeps animation CSS untouched) -->
+    <div class="info-card" style="position:fixed;bottom:20px;right:20px;max-width:320px;background:#fff;padding:12px;border-radius:10px;color:#111;box-shadow:0 10px 30px rgba(0,0,0,0.35);font-family:inherit;font-size:14px;z-index:9999">
+        <h4 style="margin:0 0 8px;font-size:15px">About this animation</h4>
+        <p style="margin:0 0 6px;color:#333">A CSS-only social icon strip using rotated and skewed link cards with accent bars and hover shadows. Lightweight and easy to reuse in headers or side widgets.</p>
+        <p style="margin:0;font-size:13px;color:#555">Usage: copy the markup and include the CSS rules shown above; adjust colors and icons to match your brand.</p>
+    </div>
 </body>
 </html>
