@@ -4,13 +4,16 @@ body{
   background-attachment: fixed;
   margin: 0;
   font-family: arial;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #header-container{
   height: 165px;
   background-image: url(images/perfumes/bg4.jpg);
   background-size: cover;
-
+  background-attachment: fixed;
 }
 
 #main-header{
@@ -22,15 +25,30 @@ body{
 }
 
 #navigation-container{
-  height: 35px;
+  height: 35px; 
   background-image: url(images/perfumes/bg7.jpg);
   background-attachment: fixed;
+  position: relative;
+}
 
+#menu-toggle {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
+  color: hsl(123, 92%, 28%);
+  font-weight: bold;
 }
 
 #main-navigation{
   width: 1000px;
   margin: auto;
+  margin-top: -20PX;
   height: 35px;
   background-image: url(images/png/nav.png);
   background-attachment: fixed;
@@ -81,6 +99,9 @@ body{
   padding: 35px;
   margin: auto;
   opacity: 0.872;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 #slide{
@@ -96,8 +117,7 @@ body{
 
 #slide img:hover{
   
-  transform: scale(1.1);
-  /*add hover or overlay effects to the images*/
+  transform: scale(1.03);
 }
 #article1{
   margin-top: 30px;
@@ -161,17 +181,17 @@ body{
   transform: scale(1.2);
 }
 #preview2{
-  height: 200px;
+  height: 220px;
   margin-top: 30px;
 }
 
 .preview2-picture{
-  width: 435px;
-  height: 200px;
-  margin: 0 15px;
+  width: 280px;
+  height: 100px;
+  margin: -22px 15px;
   float: left;
   background-color: rgb(205, 200, 208);
-  border-radius: 35px;
+  border-radius: 15PX;
   transition: .2s ease-in-out;
 }
 
@@ -179,9 +199,11 @@ body{
   transform: scale(1.1);
 }
 #footer-container{
-  height: 350px;
   background-image: url(images/perfumes/bg4.jpg);
   background-size: cover;
+  flex: 0 0 auto;
+  width: 100%;
+  margin-top: auto;
 }
 
 #footer-top{
@@ -574,17 +596,21 @@ body{
   text-decoration: underline;
 }
 #footer-bottom{
-  width: 1000px;
-  margin: 0 200px;
-  height: 50px;
+  width: 100%;
+  margin: 0;
+  height: auto;
   background-image: url(images/jpg/footer_bottom.jpg);
+  padding: 15px 0;
+  box-sizing: border-box;
 }
 
 #footer-bottom p{
   margin: 0;
   color: #ffffff;
-  line-height: 50px;
+  line-height: 1.5;
   text-align: center;
+  font-size: 14px;
+  padding: 5px 0;
 }
 
 #footer-bottom a{
@@ -624,4 +650,705 @@ body{
 .footer-info a:hover{
   color: hwb(120 22% 76%);
   text-decoration: underline;
+}
+
+.social-icon:hover{
+  transform: scale(1.2);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets & Medium Screens (768px and below) */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+  
+  #main-navigation {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+  }
+
+  #main-navigation.active {
+    display: flex;
+  }
+
+  #main-navigation a {
+    border: none;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+    flex: none;
+    float: none;
+  }
+  
+  #main-header {
+    width: 95%;
+    margin: auto;
+  }
+  
+  #main-navigation {
+    width: 95%;
+    margin: auto;
+    height: auto;
+    overflow-x: auto;
+  }
+  
+  #main-navigation a {
+    padding: 0 25px;
+    font-size: 13px;
+    line-height: 28px;
+  }
+  
+  #main-headline {
+    width: 95%;
+    margin: auto;
+  }
+  
+  #main-headline marquee {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  #content-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  /* Image and Text Responsive Fixes */
+  #slide {
+    height: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  #slide img {
+    display: inline-block;
+    height: 200px !important;
+    width: auto !important;
+    margin: 10px 5px !important;
+  }
+
+  #article1, #article2 {
+    height: auto;
+    padding: 20px 10px;
+    clear: both;
+  }
+
+  #article1 h1, #article2 h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  #article1 p, #article2 p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  #preview1 {
+    height: auto;
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .preview1-picture {
+    width: calc(50% - 10px);
+    height: auto;
+    float: none;
+    margin: 0;
+  }
+
+  .preview1-picture img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #preview2 {
+    height: auto;
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .preview2-picture {
+    width: calc(50% - 10px);
+    height: auto;
+    float: none;
+    margin: 0;
+  }
+
+  .preview2-picture img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  .readmore-picture img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .read-more p {
+    font-size: 16px;
+  }
+  
+  .about-picture img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .blog-picture img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .gallery img {
+    width: 120px;
+    height: 150px;
+  }
+  
+  #footer-container {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  #footer-top {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-info {
+    width: 100%;
+    float: none;
+    margin: 15px 0;
+    height: auto;
+  }
+  
+  #footer-bottom {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    height: auto;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+  }
+  
+  #branches table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+  
+  #reg {
+    width: 100%;
+  }
+
+  /* Register Form Responsive */
+  #register {
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  #register fieldset {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  #register legend {
+    margin: 10px 0;
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+
+  #register table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  #register table td {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    line-height: 1.5;
+  }
+
+  #register table tr {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(22, 232, 22, 0.2);
+  }
+
+  #register input[type="text"],
+  #register input[type="password"],
+  #register input[type="email"],
+  #register input[type="number"],
+  #register textarea,
+  #register select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  #register input[type="radio"],
+  #register input[type="checkbox"] {
+    margin-right: 8px;
+  }
+
+  #register input[type="submit"],
+  #register input[type="reset"] {
+    width: 48%;
+    padding: 10px;
+    margin: 5px 1%;
+    font-size: 14px;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  #main-header {
+    width: 100%;
+    height: auto;
+  }
+  
+  #main-navigation {
+    width: 100%;
+    height: auto;
+  }
+  
+  #main-navigation a {
+    padding: 0 15px;
+    font-size: 12px;
+    line-height: 25px;
+    display: inline-block;
+    width: auto;
+  }
+  
+  #main-headline {
+    width: 100%;
+  }
+  
+  #main-headline marquee {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  
+  #content-container {
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+  }
+
+  /* Image Responsive Fixes */
+  #slide {
+    height: auto;
+    padding: 10px 0;
+    clear: both;
+  }
+
+  #slide img {
+    display: block;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100%;
+    margin: 8px 0 !important;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  #article1, #article2 {
+    height: auto;
+    padding: 15px;
+    margin-top: 20px;
+    clear: both;
+  }
+
+  #article1 h1, #article2 h1 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  #article1 p, #article2 p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  #preview1 {
+    height: auto;
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .preview1-picture {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .preview1-picture img {
+    width: 90% !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+
+  #preview2 {
+    height: auto;
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .preview2-picture {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .preview2-picture img {
+    width: 90% !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+
+  .read-more {
+    padding: 15px;
+  }
+  
+  .readmore-picture img {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+  }
+  
+  .read-more h1 {
+    font-size: 18px;
+  }
+  
+  .read-more p {
+    font-size: 13px;
+  }
+  
+  .about {
+    padding: 15px;
+  }
+  
+  .about-picture img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .about h1 {
+    font-size: 18px;
+  }
+  
+  .about p {
+    font-size: 14px;
+  }
+  
+  .blog {
+    padding: 15px;
+  }
+  
+  .blog-picture img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .blog h1 {
+    font-size: 18px;
+  }
+  
+  .blog p {
+    font-size: 13px;
+  }
+  
+  .gallery img {
+    width: 100px;
+    height: 130px;
+    margin: 8px;
+  }
+
+  #footer-container {
+    width: 100%;
+    flex: 0 0 auto;
+    margin-top: auto;
+  }
+  
+  #footer-top {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 15px 0;
+  }
+  
+  .footer-info {
+    width: 95%;
+    height: auto;
+    margin: 12px 0;
+    text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  .footer-info h1 {
+    font-size: 15px;
+    margin: 10px 0 8px 0;
+  }
+  
+  .footer-info p {
+    font-size: 12px;
+    margin: 8px 0;
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  .social {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  #footer-bottom {
+    width: 100%;
+    margin: 0;
+    height: auto;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+  }
+  
+  #footer-bottom p {
+    font-size: 11px;
+    line-height: 30px;
+  }
+  
+  #branches table {
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  #branches th {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  #branches td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  /* Register Form Mobile Responsive */
+  #register {
+    padding: 0;
+    margin: 10px 0;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  #register fieldset {
+    margin: 15px 8px;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  #register legend {
+    font-size: 13px;
+    margin: 5px 0;
+    padding: 6px 10px;
+    width: 90%;
+  }
+
+  #register table,
+  #register tbody,
+  #register tr,
+  #register td,
+  #register th {
+    display: block;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #register tr {
+    margin-bottom: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(22, 232, 22, 0.15);
+  }
+
+  #register td {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  #register td:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #16e816;
+  }
+
+  #register input[type="text"],
+  #register input[type="password"],
+  #register input[type="email"],
+  #register input[type="number"],
+  #register textarea,
+  #register select {
+    width: 100%;
+    padding: 8px;
+    font-size: 13px;
+    box-sizing: border-box;
+    margin: 5px 0;
+  }
+
+  #register input[type="radio"],
+  #register input[type="checkbox"] {
+    margin: 5px 8px 5px 0;
+    width: auto;
+  }
+
+  #register input[type="submit"],
+  #register input[type="reset"] {
+    width: 47%;
+    padding: 8px;
+    margin: 8px 1.5%;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  #reg {
+    width: 100%;
+  }
+}
+/* Extra Small (320px and below) */
+@media (max-width: 320px) {
+  #main-navigation a {
+    padding: 0 8px;
+    font-size: 10px;
+  }
+  
+  #slide img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #article1 h1, #article2 h1, .read-more h1, .blog h1, .about h1 {
+    font-size: 14px;
+  }
+
+  #article1 p, #article2 p {
+    font-size: 12px;
+  }
+
+  .preview1-picture img, .preview2-picture img {
+    width: 95% !important;
+    height: auto !important;
+  }
+
+  /* Register Form Extra Small */
+  #register fieldset {
+    margin: 10px 5px;
+    padding: 10px;
+  }
+
+  #register legend {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  #register td {
+    font-size: 11px;
+    padding: 6px 0;
+  }
+
+  #register input[type="text"],
+  #register input[type="password"],
+  #register input[type="email"],
+  #register input[type="number"],
+  #register textarea,
+  #register select {
+    padding: 6px;
+    font-size: 12px;
+    margin: 4px 0;
+  }
+
+  #register input[type="submit"],
+  #register input[type="reset"] {
+    width: 46%;
+    padding: 6px;
+    margin: 6px 1%;
+    font-size: 11px;
+  }
+
+  /* Footer Extra Small */
+  .footer-info {
+    width: 98%;
+    margin: 12px 0;
+  }
+
+  .footer-info h1 {
+    font-size: 12px;
+  }
+
+  .footer-info p {
+    font-size: 10px;
+  }
+
+  .footer-info li {
+    font-size: 10px;
+  }
+
+  #footer-bottom {
+    width: 100%;
+    flex: 0 0 auto;
+    margin-top: auto;
+  }
+
+  #footer-bottom p {
+    font-size: 9px;
+    line-height: 18px;
+    padding: 8px 3px;
+  }
 }

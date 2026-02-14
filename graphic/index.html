@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adams Ekpe | Graphic Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="logo">Adams Ekpe</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li class="dropdown">
+        <a href="#">Adobe Projects</a>
+        <ul class="dropdown-menu">
+          <li><a href="photoshop.html">Photoshop</a></li>
+          <li><a href="illustrator.html">Illustrator</a></li>
+          <li><a href="indesign.html">InDesign</a></li>
+          <li><a href="premiere.html">Premiere Pro</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Graphic & Multimedia Designer</h1>
+    <p>Designing thoughtful visual experiences with Adobe Creative Suite.</p>
+  </header>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am a graphic and multimedia designer with strong foundations in Photoshop,
+      Illustrator, InDesign, and Premiere Pro. Graphic design complements my web
+      development background, allowing me to craft cohesive digital experiences.
+    </p>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm" novalidate>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <p id="formStatus"></p>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

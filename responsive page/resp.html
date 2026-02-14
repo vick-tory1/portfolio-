@@ -1,199 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Simple Responsive Page — Landing</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <a class="back-btn" href="../index.html" style="position:absolute;top:58px;left:16px;z-index:9999;background:#222;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;display:flex;align-items:center;justify-content:center">← Back to Portfolio</a>
 
-  <header style="padding:24px 32px;display:flex;justify-content:space-between;align-items:center">
-    <div class="logo"><h3 style="margin:0; position:absolute;top:20px; color: rgba(0, 145, 255, 0.943);">Parrot Logo</h3></div>
-    <nav>
-      <ul class="nav-links" style="display:flex;gap:18px;margin:0;padding:0;list-style:none;align-items:center">
-        <li><a href="#">Home</a></li>
-        <li><a href="./gall.html">Gallery</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#register">Register</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Back Button -->
+  <a class="back-btn" href="../index.html">← Back to Portfolio</a>
 
-  <main style="padding:40px;max-width:1100px;margin:0 auto">
-<section class="hero-layout">
-  <div class="hero-content">
-    <h1>Responsive Interface Design</h1>
+  <!-- =========================
+       NAVBAR
+  ========================= -->
+  <nav>
+    <div class="logo">Parrot Logo</div>
 
-    <p class="hero-intro">
-      A clean, responsive interface demonstrating modern layout techniques,
-      accessible navigation, and mobile-first design principles using
-      semantic HTML and efficient CSS.
-    </p>
-
-    <p class="hero-description">
-      This project focuses on clarity, performance, and adaptability,
-      ensuring a consistent user experience across desktop, tablet,
-      and mobile devices.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn" href="./gall.html">Explore Visual Work</a>
-    </div>
-  </div>
-
-  <aside class="hero-features">
-    <h4>Key Highlights</h4>
-    <ul>
-      <li>Mobile-first, responsive layout</li>
-      <li>Accessible and semantic HTML structure</li>
-      <li>Optimized, maintainable CSS</li>
-      <li>Smooth navigation and interaction flow</li>
+    <ul class="nav-links">
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="./gall.html">Gallery</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#register">Register</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </aside>
-</section>
 
-<section id="gallery" class="portfolio-gallery">
-  <h2>Selected Work</h2>
-
-  <p class="gallery-intro">
-    A curated collection of visual projects demonstrating responsive layouts,
-    clean UI structure, and attention to design detail across different screen sizes.
-  </p>
-
-  <div class="gallery-grid">
-    <div class="gallery-card">
-      <h3>Responsive Image Gallery</h3>
-      <p>
-        Built using CSS Grid and modern layout techniques to ensure
-        consistent spacing and smooth behavior on all devices.
-      </p>
+    <!-- Burger -->
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
     </div>
+  </nav>
 
-    <div class="gallery-card">
-      <h3>UI Component Design</h3>
-      <p>
-        Focused on reusable card components with balanced typography,
-        spacing, and hover interactions for better user experience.
+  <!-- =========================
+       HERO
+  ========================= -->
+  <main>
+
+    <section class="hero-layout">
+      <div class="hero-content">
+        <h1>Responsive Interface Design</h1>
+
+        <p class="hero-intro">
+          A clean, responsive interface demonstrating modern layout techniques,
+          accessible navigation, and mobile-first design principles using
+          semantic HTML and efficient CSS.
+        </p>
+
+        <p class="hero-description">
+          This project focuses on clarity, performance, and adaptability,
+          ensuring a consistent user experience across desktop, tablet,
+          and mobile devices.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="./gall.html">Explore Visual Work</a>
+        </div>
+      </div>
+
+      <aside class="hero-features">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Mobile-first, responsive layout</li>
+          <li>Accessible and semantic HTML structure</li>
+          <li>Optimized, maintainable CSS</li>
+          <li>Smooth navigation and interaction flow</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- =========================
+         GALLERY SECTION
+    ========================= -->
+    <section id="gallery" class="portfolio-gallery">
+      <h2>Selected Work</h2>
+
+      <p class="gallery-intro">
+        A curated collection of visual projects demonstrating responsive layouts,
+        clean UI structure, and attention to design detail across different screen sizes.
       </p>
-    </div>
 
-    <div class="gallery-card">
-      <h3>Performance-Focused Layout</h3>
-      <p>
-        Lightweight structure optimized for fast loading, accessibility,
-        and maintainable styling suitable for production environments.
-      </p>
-    </div>
-  </div>
-</section>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <h3>Responsive Image Gallery</h3>
+          <p>
+            Built using CSS Grid and modern layout techniques to ensure
+            consistent spacing and smooth behavior on all devices.
+          </p>
+        </div>
 
+        <div class="gallery-card">
+          <h3>UI Component Design</h3>
+          <p>
+            Focused on reusable card components with balanced typography,
+            spacing, and hover interactions for better user experience.
+          </p>
+        </div>
 
+        <div class="gallery-card">
+          <h3>Performance-Focused Layout</h3>
+          <p>
+            Lightweight structure optimized for fast loading, accessibility,
+            and maintainable styling suitable for production environments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
     <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Use this form to get in touch. I would love to hear from you!</p>
-    <div id="formSuccess" class="form-success">
-  ✅ Thank you! Your message has been sent successfully.
-</div>
+      <h2>Contact</h2>
+      <p>Use this form to get in touch. I would love to hear from you!</p>
 
-    <form class="contact-form" id="contactForm" novalidate>
+      <div id="formSuccess" class="form-success">
+        ✅ Thank you! Your message has been sent successfully.
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
 
         <div class="contact-details">
+          <label for="yourname">Name</label>
+          <input type="text" id="yourname" placeholder="Your name" autocomplete="name" required />
+          <small class="error"></small>
 
-            <label for="yourname">Name</label>
-            <input type="text" id="yourname" placeholder="Your name" required>
-            <small class="error"></small>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Reason for your message" autocomplete="off" required />
+          <small class="error"></small>
 
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Reason for your message" required>
-            <small class="error"></small>
-
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="Your email address" required>
-            <small class="error"></small>
-
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Your email address" autocomplete="email" required />
+          <small class="error"></small>
         </div>
 
         <div class="message">
-            <label for="msg">Message</label>
-            <textarea id="msg" rows="15" placeholder="Your message..." required></textarea>
-            <small class="error"></small>
+          <label for="msg">Message</label>
+          <textarea id="msg" rows="15" placeholder="Your message..." autocomplete="off" required></textarea>
+          <small class="error"></small>
 
-            <button type="submit">Submit</button>
+          <button type="submit">Submit</button>
         </div>
 
-    </form>
-</section>
+      </form>
+    </section>
+
   </main>
 
-  <footer style="text-align:center;padding:28px;color: rgba(0, 145, 255, 0.943)">© 2026 Tory Adams🦁❤️💗🧡🐾🦁🐾</footer>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contactForm");
-  const successBox = document.getElementById("formSuccess");
+  <!-- =========================
+       FOOTER
+  ========================= -->
+  <footer>
+    © 2026 Tory Adams 🦁❤️💗🧡🐾
+  </footer>
 
-  const nameInput = document.getElementById("yourname");
-  const subjectInput = document.getElementById("subject");
-  const emailInput = document.getElementById("email");
-  const messageInput = document.getElementById("msg");
+  <!-- =========================
+       SCRIPTS
+  ========================= -->
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
 
-  function showError(input, message) {
-    const error = input.nextElementSibling;
-    error.textContent = message;
-    input.classList.add("invalid");
-    input.classList.remove("valid");
-  }
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+      burger.classList.toggle('close');
+    });
 
-  function showSuccess(input) {
-    const error = input.nextElementSibling;
-    error.textContent = "";
-    input.classList.remove("invalid");
-    input.classList.add("valid");
-  }
-
-  function isEmailValid(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    successBox.style.display = "none";
-
-    let valid = true;
-
-    if (nameInput.value.trim().length < 2) {
-      showError(nameInput, "Please enter your full name");
-      valid = false;
-    } else showSuccess(nameInput);
-
-    if (subjectInput.value.trim().length < 3) {
-      showError(subjectInput, "Subject must be at least 3 characters");
-      valid = false;
-    } else showSuccess(subjectInput);
-
-    if (!isEmailValid(emailInput.value.trim())) {
-      showError(emailInput, "Please enter a valid email address");
-      valid = false;
-    } else showSuccess(emailInput);
-
-    if (messageInput.value.trim().length < 10) {
-      showError(messageInput, "Message must be at least 10 characters");
-      valid = false;
-    } else showSuccess(messageInput);
-
-    if (valid) {
-      successBox.style.display = "block";
-      form.reset();
-
-      document
-        .querySelectorAll(".valid")
-        .forEach(el => el.classList.remove("valid"));
-    }
-  });
-});
-</script>
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('close');
+      });
+    });
+  </script>
 
   <script src="app.js"></script>
 </body>

@@ -1,0 +1,71 @@
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  background: linear-gradient(to top, #5f72bd, #90b1bc);
+  color: #111;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #647a6b;
+  position: sticky;
+  top: 0;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #222;
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.hero {
+  padding: 120px 40px;
+  text-align: center;
+  background: #fff;
+}
+
+.section {
+  padding: 80px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 14px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+}
+
+button {
+  padding: 14px;
+  background: #647a6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#formStatus {
+  margin-top: 10px;
+  font-weight: bold;
+}

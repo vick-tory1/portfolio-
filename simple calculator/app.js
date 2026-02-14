@@ -83,6 +83,15 @@ document.addEventListener('DOMContentLoaded', function(){
                 const result = evaluateExpression(expression);
                 printOutput(result === undefined || isNaN(result) ? '' : result.toString());
                 printHistory('');
+            } else if(id === '.'){
+                // add decimal point
+                let out = getOutput();
+                let raw = reverseNumberformat(out);
+                // only add decimal if there isn't one already
+                if(!raw.includes('.')){
+                    raw = raw === '' ? '0.' : raw + '.';
+                    printOutput(raw);
+                }
             } else {
                 // append digit
                 let out = getOutput();
@@ -101,6 +110,14 @@ document.addEventListener('DOMContentLoaded', function(){
                 printHistory('');
                 printOutput('');
             } else if(id === 'backspace'){
+                let out = getOutput();
+                if(out !== ''){
+                    out = reverseNumberformat(out);
+                    out = out.toString();
+                    out = out.slice(0, -1);
+                    printOutput(out);
+                }
+            } else if(id === 'delete'){
                 let out = getOutput();
                 if(out !== ''){
                     out = reverseNumberformat(out);

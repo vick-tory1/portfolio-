@@ -88,3 +88,88 @@ button:nth-child(20){
     background-color: #076a5a;
     font-size: 18px;
 }
+
+/* Responsive Media Queries */
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+    #container {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    #calculator {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .operator, .number, .empty {
+        width: 50px;
+        height: 50px;
+        margin: 12px;
+    }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    #container {
+        width: 95%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    #calculator {
+        width: 95%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .operator, .number, .empty {
+        width: 45px;
+        height: 45px;
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    #output {
+        font-size: 24px;
+        margin: 8px 15px;
+    }
+
+    #history {
+        font-size: 13px;
+        margin: 0 15px;
+    }
+}
+
+/* Extra Small (320px and below) */
+@media screen and (max-width: 320px) {
+    #container {
+        width: 98%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    #calculator {
+        width: 98%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .operator, .number, .empty {
+        width: 38px;
+        height: 38px;
+        margin: 8px;
+        font-size: 12px;
+    }
+
+    #output {
+        font-size: 18px;
+        margin: 6px 12px;
+    }
+
+    #history {
+        font-size: 11px;
+        margin: 0 12px;
+    }
+}

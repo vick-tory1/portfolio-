@@ -40,6 +40,10 @@ nav {
   align-items: center;
   padding: 14px 28px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+
+  /* ✅ FIX */
+  position: relative;
+  z-index: 1000;
 }
 
 .logo {
@@ -88,6 +92,10 @@ nav {
   border-radius: 6px;
   display: none;
   cursor: pointer;
+
+  /* ✅ FIX */
+  position: relative;
+  z-index: 1100;
 }
 
 .burger div {
@@ -204,7 +212,6 @@ nav {
   gap: 22px;
 }
 
-/* Gallery cards */
 .gallery a {
   position: relative;
   display: block;
@@ -215,23 +222,20 @@ nav {
   transition: all 0.35s ease;
 }
 
-/* Images */
 .gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: 
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   cursor: zoom-in;
 }
-.hero-actions .btn{
+
+.hero-actions .btn {
   font-size: larger;
   color: cadetblue;
 }
 
-/* Hover overlay */
 .gallery a::after {
   content: "View Image";
   position: absolute;
@@ -245,13 +249,11 @@ nav {
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  
 }
 
-/* Hover effects */
 .gallery a:hover::after {
   opacity: 1;
-  transform: scale(2.5); /* EXTREME SIZE */
+  transform: scale(2.5);
   z-index: 20;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
 }
@@ -263,27 +265,6 @@ nav {
 .gallery a:hover {
   box-shadow: 0 14px 40px rgba(34, 197, 94, 0.45);
   transform: translateY(-6px);
-}
-
-
-
-/* Validation states */
-.contact-form input.valid,
-.contact-form textarea.valid {
-  outline: 2px solid #22c55e;
-  background-color: rgba(34, 197, 94, 0.08);
-}
-
-.contact-form input.invalid,
-.contact-form textarea.invalid {
-  outline: 2px solid #ef4444;
-  background-color: rgba(239, 68, 68, 0.08);
-}
-
-.contact-form .error {
-  font-size: 0.8rem;
-  color: #ef4444;
-  min-height: 1em;
 }
 
 /* =========================
@@ -326,6 +307,9 @@ nav {
     gap: 24px;
     transform: translateX(100%);
     transition: 0.3s ease-in-out;
+
+    /* ✅ FIX */
+    z-index: 1001;
   }
 
   .nav-active {
@@ -356,7 +340,6 @@ nav {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-
 /* === Form Success Message === */
 .form-success {
   display: none;
@@ -369,25 +352,6 @@ nav {
   font-weight: 600;
   text-align: center;
   animation: fadeSlide 0.4s ease-out;
-}
-
-/* Validation states */
-.contact-form input.valid,
-.contact-form textarea.valid {
-  outline: 2px solid #22c55e;
-  background-color: rgba(34, 197, 94, 0.08);
-}
-
-.contact-form input.invalid,
-.contact-form textarea.invalid {
-  outline: 2px solid #ef4444;
-  background-color: rgba(239, 68, 68, 0.08);
-}
-
-.contact-form .error {
-  font-size: 0.8rem;
-  color: #ef4444;
-  min-height: 1em;
 }
 
 /* Animation */
