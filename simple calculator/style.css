@@ -92,7 +92,7 @@ button:nth-child(20){
 /* Responsive Media Queries */
 
 /* Tablets (768px and below) */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 768px) {
     #container {
         width: 90%;
         margin: 40px auto;
@@ -109,67 +109,68 @@ button:nth-child(20){
         margin: 12px;
     }
 }
+/* Universal responsive layout override */
+@media screen and (max-width: 2000px) {
 
-/* Mobile (480px and below) */
-@media screen and (max-width: 480px) {
-    #container {
-        width: 95%;
-        height: auto;
-        margin: 20px auto;
+    /* Center whole app vertically + horizontally */
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    #calculator {
-        width: 95%;
+    /* Make container flexible */
+    #container {
+        width: min(95vw, 1000px);
         height: auto;
-        margin: 20px auto;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    /* Scale calculator smoothly on smaller screens */
+    #calculator {
+        margin: 0;
+        top: 0;
+    }
+
+    /* 🔥 Remove float layout safely */
+    #keyboard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
     }
 
     .operator, .number, .empty {
-        width: 45px;
-        height: 45px;
-        margin: 10px;
-        font-size: 14px;
+        float: none; /* override old layout */
+        flex: 0 0 auto; /* keep fixed button size */
     }
-
-    #output {
-        font-size: 24px;
-        margin: 8px 15px;
-    }
-
-    #history {
-        font-size: 13px;
-        margin: 0 15px;
+}
+@media screen and (max-width: 1024px) {
+    #calculator {
+        transform: scale(0.95);
+        transform-origin: center;
     }
 }
 
-/* Extra Small (320px and below) */
-@media screen and (max-width: 320px) {
-    #container {
-        width: 98%;
-        height: auto;
-        margin: 10px auto;
-    }
-
+@media screen and (max-width: 768px) {
     #calculator {
-        width: 98%;
-        height: auto;
-        margin: 10px auto;
+        transform: scale(0.85);
     }
+}
 
-    .operator, .number, .empty {
-        width: 38px;
-        height: 38px;
-        margin: 8px;
-        font-size: 12px;
+@media screen and (max-width: 600px) {
+    #calculator {
+        transform: scale(0.75);
     }
+}
 
-    #output {
-        font-size: 18px;
-        margin: 6px 12px;
-    }
-
-    #history {
-        font-size: 11px;
-        margin: 0 12px;
+@media screen and (max-width: 400px) {
+    #calculator {
+        transform: scale(0.65);
     }
 }

@@ -7,10 +7,18 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+:root {
+  --nav-height: 70px;
 }
 
 body {
@@ -35,7 +43,7 @@ nav {
   justify-content: center;
   position: fixed;
   width: 100%;
-  height: 70px;
+  height: var(--nav-height);
   z-index: 10000;
 }
 
@@ -44,6 +52,7 @@ nav ul {
   align-items: center;
   padding: 0 10%;
   list-style: none;
+  margin: 0;
 }
 
 nav ul li a {
@@ -73,7 +82,7 @@ nav ul li a:hover {
    HERO
 ========================= */
 .hero {
-  padding-top: 130px;
+  padding-top: calc(var(--nav-height) + 60px);
 }
 
 .hero img {
@@ -124,6 +133,7 @@ h1 {
 
 .aboutme-text {
   width: 40%;
+  min-width: 300px;
   margin-left: 40px;
   text-align: left;
 }
@@ -141,7 +151,7 @@ h1 {
 
 .projects {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -150,7 +160,7 @@ h1 {
   color: rgb(245, 247, 245);
 }
 
-/* PROJECT CARDS (UNIFIED STYLE) */
+/* PROJECT CARDS */
 .organic-products,
 .Perfume,
 .ecom,
@@ -158,7 +168,7 @@ h1 {
 .calculator,
 .ngo,
 .movie-app,
-.site  {
+.site {
   width: 400px;
   max-width: 100%;
   height: 400px;
@@ -168,16 +178,34 @@ h1 {
   margin: 20px;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Hover only on non-touch devices */
+@media (hover: hover) {
+  .organic-products:hover,
+  .Perfume:hover,
+  .ecom:hover,
+  .grad:hover,
+  .calculator:hover,
+  .ngo:hover,
+  .movie-app:hover,
+  .site:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Background images */
 .organic-products { background-image: url("images/responsive frontend.jpg"); }
 .Perfume { background-image: url("images/perfumes.jpg"); }
 .ecom { background-image: url("images/IMG-20250902-WA0006.jpg"); }
 .grad { background-image: url("images/grading js.jpg"); }
 .calculator { background-image: url("images/calculator.jpg"); }
-.site { background-image: url("images/Screenshot\ \(229\).png"); }
+.site { background-image: url("images/Screenshot (229).png"); }
 .ngo { background-image: url("images/flaas.jpeg"); }
-.movie-app { background-image: url("images/Screenshot\ \(215\).png"); }
+.movie-app { background-image: url("images/Screenshot (215).png"); }
 
 /* =========================
    PROJECT TEXT OVERLAY
@@ -207,11 +235,14 @@ h1 {
 }
 
 .button {
-  border: 5px solid lightblue;
+  display: inline-block;
+  border: 3px solid lightblue;
   border-radius: 10px;
   width: 160px;
-  margin-bottom: 100px;
-  margin-left: 10px;
+  padding: 10px 0;
+  margin-top: 10px;
+  color: black;
+  text-align: center;
 }
 
 /* =========================
@@ -236,12 +267,14 @@ h1 {
 .contact-form {
   max-width: 1100px;
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   color: white;
 }
 
 .contact-details {
   flex: 1;
+  min-width: 280px;
   margin-right: 50px;
 }
 
@@ -257,6 +290,7 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 60%;
+  min-width: 280px;
 }
 
 .message textarea {
@@ -315,49 +349,12 @@ footer .container {
 }
 
 /* =========================
-   DROPDOWN NAV
+   SMALL / TOUCH DEVICES
 ========================= */
-nav ul li.dropdown {
-  position: relative;
-}
+@media (max-width: 900px), (hover: none) and (pointer: coarse) {
 
-nav ul li .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #222;
-  min-width: 220px;
-  border-radius: 6px;
-  z-index: 999;
-}
-
-nav ul li.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* =========================
-   MOBILE FIXES
-========================= */
-@media (max-width: 390px) {
-
-  nav ul {
-    padding: 0 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .aboutme {
-    padding: 20px;
-  }
-
-  .aboutme-section {
-    flex-direction: column;
-  }
-
-  .aboutme-image {
-    height: 380px;
-    margin-bottom: 20px;
+  .hero {
+    padding-top: calc(var(--nav-height) + 40px);
   }
 
   .aboutme-text {
@@ -366,6 +363,15 @@ nav ul li.dropdown:hover .dropdown-content {
     text-align: center;
   }
 
+  .contact-form {
+    flex-direction: column;
+  }
+
+  .message {
+    width: 100%;
+  }
+
+  /* Project cards stack cleanly */
   .organic-products,
   .Perfume,
   .ecom,
@@ -374,23 +380,33 @@ nav ul li.dropdown:hover .dropdown-content {
   .ngo,
   .movie-app,
   .site {
-    height: 320px;
-    margin: 15px auto;
-  }
-
-  .contact-form {
+    display: flex;
     flex-direction: column;
+    height: auto;
+    width: 92%;
+    margin: 20px auto;
+    background-position: top;
   }
 
-  .contact-details {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .message {
+  /* Image section at top */
+  .organic-products::before,
+  .Perfume::before,
+  .ecom::before,
+  .grad::before,
+  .calculator::before,
+  .ngo::before,
+  .movie-app::before,
+  .site::before {
+    content: "";
     width: 100%;
+    height: 220px;
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+    display: block;
   }
 
+  /* Text always visible */
   .text {
     position: static;
     height: auto;
