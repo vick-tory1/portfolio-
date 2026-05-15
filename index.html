@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tory Adams's Portfolio Site</title>
+    <title>Adams Celestina Ekpe Portfolio Site</title>
 
     <link href="normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Work+Sans&display=swap" rel="stylesheet">
@@ -14,16 +14,13 @@
 
 <body>
 
-<a href="index.html"
-   style="position:fixed;top:16px;left:16px;background:#222;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;z-index:9999;font-family:sans-serif;">
-← Back to Portfolio
-</a>
 
 <!-- ================= NAV ================= -->
 <nav>
     <ul>
         <li><a href="#aboutme">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="graphic-design.html">Graphic Design</a></li>
         <li><a href="#contact">Contact Me</a></li>
     </ul>
 </nav>
@@ -159,50 +156,62 @@
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="contact">
     <h2>Contact Me</h2>
-    <p>Use this form to get in touch. I would love to hear from you!</p>
+    <p>Use this form to start a WhatsApp message with your details. I would love to hear from you!</p>
 
     <form class="contact-form" id="contactForm" novalidate>
 
         <div class="contact-details">
 
             <label for="yourname">Name</label>
-            <input type="text" id="yourname" placeholder="Your name" autocomplete="name"     required>
-            <small class="error"></small>
+            <input type="text" id="yourname" name="name" placeholder="Your name" autocomplete="name" aria-describedby="nameError" required>
+            <small class="error" id="nameError" aria-live="polite"></small>
 
             <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Reason for your message" autocomplete="off" required>
-            <small class="error"></small>
+            <input type="text" id="subject" name="subject" placeholder="Reason for your message" autocomplete="off" aria-describedby="subjectError" required>
+            <small class="error" id="subjectError" aria-live="polite"></small>
 
             <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="Your email address" autocomplete="email" required>
-            <small class="error"></small>
+            <input type="email" id="email" name="email" placeholder="Your email address" autocomplete="email" aria-describedby="emailError" required>
+            <small class="error" id="emailError" aria-live="polite"></small>
 
         </div>
 
         <div class="message">
             <label for="msg">Message</label>
-            <textarea id="msg" rows="15" placeholder="Your message..." autocomplete="off" required></textarea>
-            <small class="error"></small>
+            <textarea id="msg" name="message" rows="15" placeholder="Your message..." autocomplete="off" aria-describedby="messageError" required></textarea>
+            <small class="error" id="messageError" aria-live="polite"></small>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Send Message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </div>
 
     </form>
+
+    <div class="direct-contact" aria-label="Direct contact links">
+        <a href="https://wa.me/2349057920012?text=Hi%20Adams%20Celestina%20Ekpe%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20work%20with%20you." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="mailto:adamsekpe2@gmail.com?subject=Portfolio%20Inquiry">Email</a>
+        <a href="https://www.instagram.com/ekpe.adams/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/in/adams-ekpe/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/vick-tory1" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
     <div class="container">
         <div class="stud">
-           Tory Adams 🦁 Portfolio || made with ❤️💗🧡🐾🦁🐾
+           Adams Celestina Ekpe 🦁 Portfolio || made with ❤️💗🧡🐾🦁🐾
         </div>
 
         <div class="social-media">
-            <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook-official"></i></a>
-            <a href="https://x.com/home" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/login/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/adams.ekpe" target="_blank" rel="noopener noreferrer" aria-label="Facebook: Adams Celestina Ekpe"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            <a href="https://x.com/adamsking321" target="_blank" rel="noopener noreferrer" aria-label="X: @adamsking321"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://wa.me/2349057920012?text=Hi%20Adams%20Celestina%20Ekpe%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20work%20with%20you." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Adams Celestina Ekpe"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="mailto:adamsekpe2@gmail.com?subject=Portfolio%20Inquiry" aria-label="Email Adams Celestina Ekpe"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/ekpe.adams/" target="_blank" rel="noopener noreferrer" aria-label="Instagram: ekpe.adams"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/adams-ekpe/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn: Adams Celestina Ekpe"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/vick-tory1" target="_blank" rel="noopener noreferrer" aria-label="GitHub: vick-tory1"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a class="social-text-link" href="https://www.tiktok.com/@yhwh..s_chosen" target="_blank" rel="noopener noreferrer" aria-label="TikTok: yhwh..s_chosen">TikTok</a>
         </div>
         </div>
 </footer>
@@ -213,16 +222,20 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
     let valid = true;
+    const whatsappNumber = "2349057920012";
+    const contactEmail = "adamsekpe2@gmail.com";
+    const status = document.getElementById("formStatus");
 
     function showError(input, message) {
         const error = input.nextElementSibling;
         error.textContent = message;
-        error.style.color = "red";
+        input.setAttribute("aria-invalid", "true");
         valid = false;
     }
 
     function clearError(input) {
         input.nextElementSibling.textContent = "";
+        input.removeAttribute("aria-invalid");
     }
 
     const name = document.getElementById("yourname");
@@ -230,13 +243,13 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     const email = document.getElementById("email");
     const message = document.getElementById("msg");
 
-    if (name.value.trim() === "") {
+    if (name.value.trim().length < 2) {
         showError(name, "Name is required");
     } else {
         clearError(name);
     }
 
-    if (subject.value.trim() === "") {
+    if (subject.value.trim().length < 3) {
         showError(subject, "Subject is required");
     } else {
         clearError(subject);
@@ -251,15 +264,34 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         clearError(email);
     }
 
-    if (message.value.trim() === "") {
-        showError(message, "Message cannot be empty");
+    if (message.value.trim().length < 10) {
+        showError(message, "Message must be at least 10 characters");
     } else {
         clearError(message);
     }
 
     if (valid) {
-        alert("Form submitted successfully!");
+        const whatsappMessage = [
+            "Hi Adams Celestina Ekpe, I found your portfolio and would like to contact you.",
+            "",
+            `Name: ${name.value.trim()}`,
+            `Email: ${email.value.trim()}`,
+            `Subject: ${subject.value.trim()}`,
+            "",
+            `Message: ${message.value.trim()}`
+        ].join("\n");
+
+        status.textContent = "Opening WhatsApp with your message...";
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, "_blank", "noopener,noreferrer");
+
+        const emailSubject = encodeURIComponent(`Portfolio Inquiry: ${subject.value.trim()}`);
+        const emailBody = encodeURIComponent(whatsappMessage);
+        setTimeout(() => {
+            status.innerHTML = `If WhatsApp did not open, <a href="mailto:${contactEmail}?subject=${emailSubject}&body=${emailBody}">send this by email instead</a>.`;
+        }, 700);
         this.reset();
+    } else {
+        status.textContent = "Please fix the highlighted fields before sending.";
     }
 });
 </script>
