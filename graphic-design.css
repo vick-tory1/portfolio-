@@ -169,6 +169,10 @@ h3 {
   background: var(--accent-strong);
 }
 
+.nav-actions .nav-back {
+  border: 2px solid var(--ink);
+}
+
 .hero,
 .overview,
 .services-section,

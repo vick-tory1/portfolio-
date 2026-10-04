@@ -1,6 +1,3 @@
-/* =========================
-   GLOBAL RESET & SAFETY
-========================= */
 *,
 *::before,
 *::after {
@@ -11,7 +8,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -30,13 +28,14 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Days One", sans-serif;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
+
 nav {
   display: flex;
   background-color: #647a6b;
@@ -70,9 +69,12 @@ nav ul li a:hover {
   color: #52c5ff;
 }
 
-/* =========================
-   CONTAINER
-========================= */
+.nav-toggle {
+  display: none;
+}
+
+/* GENERAL CONTAINER */
+
 .container {
   position: relative;
   width: 100%;
@@ -81,9 +83,8 @@ nav ul li a:hover {
   padding: 0 15px;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
+
 .hero {
   padding-top: calc(var(--nav-height) + 60px);
 }
@@ -103,9 +104,8 @@ h1 {
   margin: 30px 0 100px;
 }
 
-/* =========================
-   ABOUT ME
-========================= */
+/* ABOUT */
+
 .aboutme {
   width: 90%;
   max-width: 1100px;
@@ -113,7 +113,7 @@ h1 {
   text-align: center;
   padding: 40px 50px 70px;
   margin: 0 auto;
-  box-shadow: 
+  box-shadow:
     10px 10px 0px rgb(0 0 0 / 40%),
     -10px -10px 0px rgb(255 114 114 / 80%);
 }
@@ -141,9 +141,8 @@ h1 {
   text-align: left;
 }
 
-/* =========================
-   PROJECTS
-========================= */
+/* PROJECTS */
+
 #projects {
   padding: 5px;
   width: 100%;
@@ -152,18 +151,19 @@ h1 {
   text-align: center;
 }
 
-.projects {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+/* PROJECT GRID */
 
-#projects h2 {
-  color: rgb(245, 247, 245);
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 440px);
+  column-gap: 80px;
+  justify-content: center;
+  align-items: stretch;
 }
 
 /* PROJECT CARDS */
+
+.ipo,
 .organic-products,
 .Perfume,
 .ecom,
@@ -171,7 +171,8 @@ h1 {
 .calculator,
 .ngo,
 .movie-app,
-.site {
+.site,
+.responsive-Page {
   width: 400px;
   max-width: 100%;
   height: 400px;
@@ -183,11 +184,13 @@ h1 {
   background-position: center;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* Hover only on non-touch devices */
 @media (hover: hover) {
+  .ipo:hover,
   .organic-products:hover,
   .Perfume:hover,
   .ecom:hover,
@@ -195,71 +198,254 @@ h1 {
   .calculator:hover,
   .ngo:hover,
   .movie-app:hover,
-  .site:hover {
+  .site:hover,
+  .responsive-Page:hover {
     transform: translateY(-5px);
   }
 }
 
-/* Background images */
-.organic-products { background-image: url("images/responsive frontend.jpg"); }
-.Perfume { background-image: url("images/perfumes.jpg"); }
-.ecom { background-image: url("images/IMG-20250902-WA0006.jpg"); }
-.grad { background-image: url("images/grading js.jpg"); }
-.calculator { background-image: url("images/task.png"); }
-.site { background-image: url("images/Screenshot (229).png"); }
-.ngo { background-image: url("images/flaas.jpeg"); }
-.movie-app { background-image: url("images/Screenshot (215).png"); }
+/* PROJECT BACKGROUNDS */
 
-/* =========================
-   PROJECT TEXT OVERLAY
-========================= */
+.ipo {
+  background-image: url("images/dangote-refinery.jpg");
+}
+
+.organic-products {
+  background-image: url("images/responsive frontend.jpg");
+}
+
+.Perfume {
+  background-image: url("images/perfumes.jpg");
+}
+
+.ecom {
+  background-image: url("images/IMG-20250902-WA0006.jpg");
+}
+
+.grad {
+  background-image: url("images/grading js.jpg");
+}
+
+.calculator {
+  background-image: url("images/task.png");
+}
+
+.site {
+  background-image: url("images/image.png");
+}
+
+.responsive-Page {
+  background-image: url("images/ai-refund-assessment.png");
+}
+
+.ngo {
+  background-image: url("images/flaas.jpeg");
+}
+
+.movie-app {
+  background-image: url("images/Screenshot (215).png");
+}
+
+/* PROJECT CARD CONTENT */
+
 .text {
   position: absolute;
   height: 65px;
   width: 100%;
   left: 0;
   bottom: 0;
-  background-color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgb(8 22 38 / 98%) 0%,
+      rgb(15 43 66 / 97%) 50%,
+      rgb(19 61 82 / 97%) 100%
+    );
+
+  color: white;
   overflow: hidden;
-  transition: 0.2s;
+
+  transition:
+    height 0.2s ease,
+    background 0.2s ease;
+
   padding: 20px;
+  text-align: center;
+
+  border-top: 1px solid rgb(105 210 255 / 35%);
+
+  box-shadow:
+    0 -10px 30px rgb(0 0 0 / 25%),
+    inset 0 1px 0 rgb(255 255 255 / 8%);
 }
 
 .text:hover {
-  height: 175px;
+  height: 190px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgb(7 20 36 / 99%) 0%,
+      rgb(12 48 73 / 98%) 50%,
+      rgb(17 70 94 / 98%) 100%
+    );
 }
 
 .text h3 {
+  color: white;
   margin-top: 3px;
+  margin-bottom: 14px;
+}
+
+.text p {
+  color: rgb(255 255 255 / 88%);
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* INDIVIDUAL PROJECT EXPANSION HEIGHTS */
+
+.ipo .text:hover {
+  height: 235px;
+}
+
+.site .text:hover {
+  height: 235px;
+}
+
+.movie-app .text:hover {
+  height: 210px;
+}
+
+.organic-products .text:hover {
+  height: 205px;
+}
+
+.Perfume .text:hover {
+  height: 205px;
+}
+
+.ecom .text:hover {
+  height: 210px;
+}
+
+.grad .text:hover {
+  height: 205px;
+}
+
+.calculator .text:hover {
+  height: 205px;
+}
+
+.responsive-Page .text:hover {
+  height: 235px;
+}
+
+.ngo .text:hover {
+  height: 215px;
+}
+
+.ipo > .text,
+.site > .text {
+  padding-bottom: 35px;
+}
+
+.ipo > .text > h3,
+.site > .text > h3 {
+  margin-top: 3px;
+  margin-bottom: 20px;
+  transform: translateY(-7px);
+}
+
+.ipo .text p,
+.site .text p {
+  margin-bottom: 0;
+}
+
+/* PROJECT BUTTON */
+
+.text .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 160px;
+  height: 48px;
+
+  padding: 0;
+  margin: 24px auto 0;
+
+  border: 2px solid #69d2ff;
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgb(105 210 255 / 12%),
+      rgb(105 210 255 / 5%)
+    );
+
+  color: white;
+  text-align: center;
+  font-weight: 600;
+
+  box-shadow:
+    0 5px 18px rgb(0 0 0 / 18%),
+    inset 0 1px 0 rgb(255 255 255 / 12%);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.text .button:hover {
+  background: #69d2ff;
+  color: #06131f;
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 22px rgb(105 210 255 / 30%),
+    inset 0 1px 0 rgb(255 255 255 / 35%);
 }
 
 .content {
   color: black;
 }
 
-.button {
-  display: inline-block;
-  border: 3px solid lightblue;
-  border-radius: 10px;
-  width: 160px;
-  padding: 10px 0;
-  margin-top: 10px;
-  color: black;
-  text-align: center;
-}
+/* CONTACT */
 
-/* =========================
-   CONTACT
-========================= */
 .contact {
   width: 100%;
-  padding: 75px 0 50px;
+  padding: 86px 20px 64px;
   text-align: center;
-  background-color: rgba(3, 3, 3, 0.45);
+
+  background:
+    radial-gradient(
+      circle at 12% 12%,
+      rgb(82 197 255 / 28%),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 76%,
+      rgb(82 197 255 / 18%),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #102236,
+      #173b4a 52%,
+      #162537
+    );
 }
 
-.contact p {
-  margin-bottom: 50px;
+.contact > p {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto 50px;
 }
 
 .contact h2,
@@ -268,25 +454,63 @@ h1 {
 }
 
 .contact-form {
-  max-width: 1100px;
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1080px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  gap: 28px;
   margin: 0 auto;
+  padding: 30px;
+
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 18px;
+
+  background: rgb(7 18 31 / 72%);
+
+  box-shadow: 0 24px 60px rgb(0 0 0 / 28%);
+
   color: white;
+
+  backdrop-filter: blur(14px);
 }
 
-.contact-details {
-  flex: 1;
-  min-width: 280px;
-  margin-right: 50px;
+.contact-details,
+.message {
+  width: 100%;
+  min-width: 0;
+}
+
+.contact-details input,
+.message textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 10px;
+
+  padding: 14px 16px;
+
+  background: rgb(255 255 255 / 9%);
+  color: white;
+
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 8%);
+
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
 .contact-details input {
-  width: 100%;
-  border-radius: 5px;
-  border: 0;
-  padding: 15px 20px;
   margin-bottom: 8px;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: rgb(255 255 255 / 56%);
 }
 
 .contact label {
@@ -297,7 +521,15 @@ h1 {
 }
 
 .contact input:focus,
-.contact textarea:focus,
+.contact textarea:focus {
+  border-color: #69d2ff;
+
+  background: rgb(255 255 255 / 15%);
+
+  box-shadow:
+    0 0 0 4px rgb(105 210 255 / 18%);
+}
+
 .message button:focus-visible,
 .direct-contact a:focus-visible,
 .social-media a:focus-visible {
@@ -314,7 +546,9 @@ h1 {
   display: block;
   min-height: 24px;
   margin-bottom: 10px;
+
   color: #ffd7d7;
+
   font-weight: 700;
   text-align: left;
 }
@@ -322,63 +556,112 @@ h1 {
 .message {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  min-width: 280px;
 }
 
 .message textarea {
-  border-radius: 5px;
-  border: 0;
-  padding: 15px 20px;
+  min-height: 220px;
+  resize: vertical;
 }
 
 .message button {
-  color: #1d3d5f;
+  align-self: flex-end;
+
+  color: #06131f;
+
   border: 0;
-  border-radius: 5px;
-  background: lightblue;
-  width: 140px;
-  height: 40px;
-  margin-top: 40px;
-  margin-left: auto;
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #87dcff,
+      #4fb9ed
+    );
+
+  width: 172px;
+  min-height: 48px;
+
+  margin-top: 18px;
+
+  box-shadow:
+    0 10px 24px rgb(24 160 216 / 28%);
+
   text-transform: uppercase;
+  letter-spacing: 0.08em;
   font-weight: bold;
+
   cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
 }
 
 .message button:hover {
-  background: black;
-  color: white;
+  background:
+    linear-gradient(
+      135deg,
+      #c1efff,
+      #67c8f3
+    );
+
+  color: #06131f;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 28px rgb(24 160 216 / 38%);
 }
 
 .form-status {
+  width: 100%;
   min-height: 24px;
-  margin: 16px 0 0;
+  margin: 14px 0 0;
+
   color: white;
+
   font-weight: 700;
   text-align: right;
 }
 
+/* DIRECT CONTACT */
+
 .direct-contact {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   justify-content: center;
   gap: 10px;
-  width: min(1100px, 92%);
+
+  width: 100%;
+  max-width: 1100px;
+
   margin: 34px auto 0;
 }
 
 .direct-contact a {
   min-height: 44px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   border: 2px solid lightblue;
   border-radius: 8px;
+
   padding: 10px 14px;
+
   background: rgb(255 255 255 / 12%);
+
   color: white;
+
   font-weight: 700;
+  text-align: center;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
 }
 
 .direct-contact a:hover {
@@ -386,22 +669,33 @@ h1 {
   color: #1d3d5f;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
+
 footer {
-  height: 90px;
+  min-height: 90px;
   background-color: #1f2027;
 }
 
 footer .container {
   display: flex;
   align-items: center;
-  height: 100%;
+  justify-content: space-between;
+
+  min-height: 90px;
+  height: auto;
+
+  gap: 20px;
 }
 
 .social-media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 4px;
   font-size: 200%;
+
   margin-left: auto;
 }
 
@@ -417,8 +711,10 @@ footer .container {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   min-width: 40px;
   min-height: 40px;
+
   color: white;
   border-radius: 6px;
 }
@@ -438,11 +734,9 @@ footer .container {
   color: white;
 }
 
-/* =========================
-   SMALL / TOUCH DEVICES
-========================= */
-@media (max-width: 900px), (hover: none) and (pointer: coarse) {
+/* TABLET / TOUCH */
 
+@media (max-width: 900px), (hover: none) and (pointer: coarse) {
   .hero {
     padding-top: calc(var(--nav-height) + 40px);
   }
@@ -465,19 +759,83 @@ footer .container {
     text-align: center;
   }
 
-  .contact-form {
-    flex-direction: column;
+  .contact {
+    padding: 70px 20px 55px;
   }
 
+  .contact > p {
+    margin-bottom: 35px;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .contact-details,
   .message {
     width: 100%;
+    min-width: 0;
+  }
+
+  .message textarea {
+    min-height: 200px;
   }
 
   .form-status {
     text-align: left;
   }
 
-  /* Project cards stack cleanly */
+  .direct-contact {
+    width: 100%;
+    padding: 0 4px;
+    margin-top: 28px;
+  }
+
+  .direct-contact a {
+    flex: 1 1 auto;
+  }
+
+  footer {
+    min-height: 100px;
+  }
+
+  footer .container {
+    min-height: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    text-align: center;
+  }
+
+  .stud {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-media {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  /* PROJECT CARDS ON TABLET / MOBILE */
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 30px;
+  }
+
+  .ipo,
   .organic-products,
   .Perfume,
   .ecom,
@@ -485,16 +843,22 @@ footer .container {
   .calculator,
   .ngo,
   .movie-app,
-  .site {
+  .site,
+  .responsive-Page {
     display: flex;
     flex-direction: column;
-    height: auto;
+
     width: 92%;
-    margin: 20px auto;
+    max-width: 400px;
+
+    height: auto;
+
+    margin: 0;
+
     background-position: top;
   }
 
-  /* Image section at top */
+  .ipo::before,
   .organic-products::before,
   .Perfume::before,
   .ecom::before,
@@ -502,24 +866,310 @@ footer .container {
   .calculator::before,
   .ngo::before,
   .movie-app::before,
-  .site::before {
+  .site::before,
+  .responsive-Page::before {
     content: "";
+
     width: 100%;
     height: 220px;
+
+    flex-shrink: 0;
+
     background: inherit;
     background-size: cover;
     background-position: center;
+
     display: block;
   }
 
-  /* Text always visible */
   .text {
     position: static;
+
+    width: 100%;
     height: auto;
+
+    min-height: 180px;
+
     overflow: visible;
+
+    padding: 20px;
   }
 
   .text:hover {
     height: auto;
+  }
+
+  .text h3 {
+    color: white;
+
+    margin-top: 3px;
+    margin-bottom: 14px;
+  }
+
+  .text p {
+    color: rgb(255 255 255 / 88%);
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    line-height: 1.5;
+  }
+
+  .text .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 160px;
+    height: 48px;
+
+    margin: 24px auto 0;
+  }
+
+  .ipo .text:hover,
+  .site .text:hover,
+  .movie-app .text:hover,
+  .organic-products .text:hover,
+  .Perfume .text:hover,
+  .ecom .text:hover,
+  .grad .text:hover,
+  .calculator .text:hover,
+  .responsive-Page .text:hover,
+  .ngo .text:hover {
+    height: auto;
+  }
+}
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 640px) {
+  nav {
+    justify-content: flex-start;
+    min-height: var(--nav-height);
+  }
+
+  nav .nav-toggle {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    z-index: 2;
+
+    display: grid;
+
+    width: 46px;
+    height: 46px;
+
+    align-content: center;
+    justify-items: center;
+
+    gap: 5px;
+
+    border: 1px solid rgb(255 255 255 / 55%);
+    border-radius: 6px;
+
+    background: transparent;
+
+    cursor: pointer;
+  }
+
+  nav .nav-toggle span {
+    width: 22px;
+    height: 2px;
+
+    background: #fff;
+
+    transition:
+      transform 180ms ease,
+      opacity 180ms ease;
+  }
+
+  nav ul {
+    display: none;
+
+    width: 100%;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 68px 16px 12px;
+  }
+
+  nav.is-open ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    width: 100%;
+    min-height: 44px;
+
+    justify-content: flex-start;
+
+    padding: 10px 12px;
+  }
+
+  nav.is-open .nav-toggle span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  nav.is-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav.is-open .nav-toggle span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .contact {
+    padding: 58px 12px 45px;
+  }
+
+  .contact > p {
+    width: 100%;
+
+    margin-bottom: 28px;
+
+    line-height: 1.6;
+  }
+
+  .contact-form {
+    width: 100%;
+
+    gap: 20px;
+
+    padding: 18px;
+
+    border-radius: 14px;
+  }
+
+  .contact-details input,
+  .message textarea {
+    width: 100%;
+
+    font-size: 16px;
+  }
+
+  .message textarea {
+    min-height: 180px;
+  }
+
+  .message button {
+    width: 100%;
+    max-width: 172px;
+
+    align-self: center;
+  }
+
+  .form-status {
+    text-align: center;
+  }
+
+  .direct-contact {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-top: 24px;
+
+    padding: 0;
+  }
+
+  .direct-contact a {
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 10px 12px;
+  }
+
+  footer {
+    min-height: 150px;
+  }
+
+  footer .container {
+    min-height: 150px;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    padding: 20px 15px;
+  }
+
+  .stud {
+    width: 100%;
+
+    line-height: 1.5;
+
+    text-align: center;
+  }
+
+  .social-media {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    font-size: 170%;
+
+    margin: 0;
+  }
+
+  .social-media a {
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  .social-text-link {
+    padding: 0 5px;
+    font-size: 0.8rem;
+  }
+}
+
+/* VERY SMALL SCREENS */
+
+@media (max-width: 380px) {
+  .contact {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .message button {
+    width: 100%;
+    max-width: none;
+  }
+
+  .social-media {
+    gap: 2px;
+    font-size: 150%;
+  }
+
+  .social-media a {
+    min-width: 38px;
+    min-height: 38px;
+  }
+
+  .social-text-link {
+    font-size: 0.75rem;
+    padding: 0 3px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  nav .nav-toggle span {
+    transition: none;
   }
 }
