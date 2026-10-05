@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#647a6b" />
+    <meta
+      name="description"
+      content="Ask Adams Ekpe about web development or graphic and multimedia design. Discuss a website, application, brand identity, packaging, digital campaign, or motion project."
+    />
+    <title>Project Chat for Web and Graphic Design | Adams Ekpe</title>
+    <link href="../normalize.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Days+One&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../portfolio.css" />
+    <link rel="stylesheet" href="support.css" />
+  </head>
+  <body class="project-support">
+    <a class="support-skip" href="#conversation">Skip to project chat</a>
+    <nav class="support-nav" aria-label="Portfolio navigation">
+      <a class="support-brand" href="../index.html"
+        ><span class="support-brand-mark" aria-hidden="true">AE</span
+        ><span class="support-brand-copy"
+          >Adams Ekpe<span>Portfolio</span></span
+        ></a
+      >
+      <div>
+        <a href="../index.html#projects">Projects</a
+        ><a href="../graphic-design.html">Graphic Design</a
+        ><a href="../index.html#contact">Contact</a>
+      </div>
+    </nav>
+
+    <main class="support-main">
+      <header class="support-intro">
+        <p class="support-kicker">
+          WEB DEVELOPMENT + GRAPHIC DESIGN · ADAMS EKPE
+        </p>
+        <h1>Let&apos;s Talk About Your Project</h1>
+        <p>
+          Ask about a small-business website, a major e-commerce business and
+          online store, an educational or fintech website, or a custom web
+          application. You can also discuss graphic design, packaging, social
+          media artwork, and motion work. I can help clarify what to build or
+          design first.
+        </p>
+        <p class="support-note">
+          This chat uses an AI assistant to answer from my portfolio
+          information. It is not Adams, and you can contact me directly on
+          WhatsApp at any point.
+        </p>
+      </header>
+
+      <div class="support-grid">
+        <section
+          class="conversation-panel"
+          aria-labelledby="conversation-title"
+        >
+          <header class="conversation-header">
+            <div>
+              <p class="support-kicker">PROJECT CHAT</p>
+              <h2 id="conversation-title">What are you planning?</h2>
+            </div>
+            <button
+              class="clear-chat"
+              id="clearChat"
+              type="button"
+              aria-label="Clear this conversation"
+            >
+              Clear chat
+            </button>
+          </header>
+          <label class="project-type-label" for="projectType"
+            >What kind of project do you have in mind?</label
+          >
+          <select id="projectType" name="projectType">
+            <option value="small-business">Small-business website</option>
+            <option value="major-ecommerce">
+              Major e-commerce business website and online store
+            </option>
+            <option value="education-platform">
+              Educational website or learning platform
+            </option>
+            <option value="fintech-website">
+              Fintech website or application
+            </option>
+            <option value="web-application">Custom web application</option>
+            <option value="redesign">Website redesign</option>
+            <option value="wordpress">WordPress website</option>
+            <option value="graphic-design">Graphic or multimedia design</option>
+            <option value="brand-identity">Logo or brand identity</option>
+            <option value="print-packaging">Print or product packaging</option>
+            <option value="digital-campaign">
+              Social media or digital campaign
+            </option>
+            <option value="video-motion">Video editing or motion design</option>
+            <option value="other">Other project</option>
+          </select>
+          <div
+            class="chat-transcript"
+            id="chatTranscript"
+            aria-live="polite"
+            aria-relevant="additions text"
+            aria-label="Conversation with Adams's AI portfolio assistant"
+          ></div>
+          <p
+            class="chat-error"
+            id="chatError"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></p>
+          <p class="chat-whatsapp-fallback">
+            Is the chat unavailable? Reach Adams directly on
+            <a
+              href="https://wa.me/2349057920012?text=Hi%20Adams%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp: +234 905 792 0012</a
+            >.
+          </p>
+          <div class="suggested-questions" aria-label="Suggested questions">
+            <button
+              type="button"
+              data-question="What kinds of websites can Adams build?"
+            >
+              What can you build?
+            </button>
+            <button
+              type="button"
+              data-question="How should I start planning an e-commerce website?"
+            >
+              E-commerce project
+            </button>
+            <button
+              type="button"
+              data-question="What information should I prepare before discussing a website?"
+            >
+              What should I prepare?
+            </button>
+          </div>
+          <form class="chat-compose" id="chatForm">
+            <label class="visually-hidden" for="chatMessage"
+              >Write a message</label
+            >
+            <textarea
+              id="chatMessage"
+              name="message"
+              rows="2"
+              maxlength="1200"
+              placeholder="Ask about web development or graphic design"
+              required
+            ></textarea>
+            <button class="chat-send" id="sendMessage" type="submit">
+              Send message
+            </button>
+          </form>
+          <p class="privacy-note">
+            Don&apos;t send passwords, payment details, or other sensitive
+            information. This browser keeps the conversation for this session
+            only.
+          </p>
+        </section>
+
+        <figure class="chat-portrait">
+          <img
+            src="../images/neon-coding.gif"
+            alt="Animated neon coding workspace."
+            decoding="async"
+            loading="eager"
+          />
+          <figcaption>
+            <strong>BUILD. DESIGN. SHIP.</strong>
+            <span>Bring your next web or visual project to life.</span>
+          </figcaption>
+        </figure>
+
+        <aside
+          class="project-side"
+          aria-label="Share project details and contact Adams"
+        >
+          <section class="project-details">
+            <p class="support-kicker">WHEN YOU&apos;RE READY</p>
+            <h2>Share a few project details</h2>
+            <p>
+              When available, Gemini uses the details you enter to draft a
+              message. If the AI endpoint is unavailable, this page prepares a
+              simple message from your entries instead. Nothing is sent
+              automatically or saved by this static site; review the draft
+              before sending it by WhatsApp or email.
+            </p>
+            <form id="leadForm" class="lead-form">
+              <label for="leadName">Name <span>optional</span></label>
+              <input
+                id="leadName"
+                name="name"
+                autocomplete="name"
+                maxlength="100"
+              />
+              <label for="leadEmail">Email <span>optional</span></label>
+              <input
+                id="leadEmail"
+                name="email"
+                type="email"
+                autocomplete="email"
+                maxlength="254"
+              />
+              <label for="leadPhone"
+                >Your WhatsApp number <span>optional</span></label
+              >
+              <input
+                id="leadPhone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                maxlength="40"
+              />
+              <label for="leadBusiness"
+                >Business or organisation <span>optional</span></label
+              >
+              <input
+                id="leadBusiness"
+                name="business"
+                autocomplete="organization"
+                maxlength="120"
+              />
+              <label for="leadDescription"
+                >What would you like designed or built?
+                <span>optional</span></label
+              >
+              <textarea
+                id="leadDescription"
+                name="description"
+                rows="4"
+                maxlength="1000"
+                placeholder="Pages, features, visual assets, or the problem you want to solve"
+              ></textarea>
+              <label for="preferredContact">Preferred contact</label>
+              <select id="preferredContact" name="preferredContact">
+                <option value="whatsapp">WhatsApp</option>
+                <option value="email">Email</option>
+              </select>
+              <button class="prepare-handoff" id="prepareHandoff" type="submit" target="_blank">
+                Message
+              </button>
+              <p
+                class="handoff-error"
+                id="handoffError"
+                role="status"
+                aria-live="polite"
+                hidden
+              ></p>
+            </form>
+            <a
+              class="handoff-link"
+              id="handoffLink"
+              href="https://wa.me/2349057920012?text=Hi%20Adams%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20web%20or%20graphic%20design%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              >Chat with Adams on WhatsApp <span aria-hidden="true">↗</span></a
+            >
+            <p class="handoff-caption" id="handoffCaption">
+              Send a message directly to Adams. Review it in WhatsApp before
+              sending.
+            </p>
+          </section>
+          <section class="service-list" aria-labelledby="services-title">
+            <p class="support-kicker">WHAT I WORK ON</p>
+            <h2 id="services-title">Web and visual design services</h2>
+            <ul>
+              <li>Small-business and organisation websites</li>
+              <li>Major e-commerce business websites and online stores</li>
+              <li>Educational websites and learning platforms</li>
+              <li>Fintech websites and web applications</li>
+              <li>Custom web applications and REST API integrations</li>
+              <li>WordPress builds, redesigns, and maintenance</li>
+              <li>
+                Responsive interface implementation with React and Next.js
+              </li>
+              <li>Logos, stickers, labels, and brand identity assets</li>
+              <li>Flyers, posters, print layouts, and product packaging</li>
+              <li>Social media posts, ads, and campaign visuals</li>
+              <li>Video editing, animation, and motion design</li>
+            </ul>
+            <p>
+              See the
+              <a href="../index.html#projects">web development projects</a> and
+              my
+              <a href="../graphic-design.html"
+                >graphic and multimedia portfolio</a
+              >
+              for examples of both kinds of work.
+            </p>
+          </section>
+        </aside>
+      </div>
+      <footer class="support-footer">
+        <span
+          >Adams Celestina Ekpe · Web Developer and Graphic Designer Support
+          Chat.</span
+        ><a href="../index.html">Back to the portfolio</a>
+      </footer>
+    </main>
+    <script src="support.js" defer></script>
+  </body>
+</html>
