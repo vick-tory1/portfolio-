@@ -1,4 +1,3 @@
-*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -35,7 +34,6 @@ h3 {
 }
 
 /* NAVIGATION */
-
 nav {
   display: flex;
   background-color: #647a6b;
@@ -74,7 +72,6 @@ nav ul li a:hover {
 }
 
 /* GENERAL CONTAINER */
-
 .container {
   position: relative;
   width: 100%;
@@ -84,7 +81,6 @@ nav ul li a:hover {
 }
 
 /* HERO */
-
 .hero {
   padding-top: calc(var(--nav-height) + 60px);
 }
@@ -105,7 +101,6 @@ h1 {
 }
 
 /* ABOUT */
-
 .aboutme {
   width: 90%;
   max-width: 1100px;
@@ -142,7 +137,6 @@ h1 {
 }
 
 /* PROJECTS */
-
 #projects {
   padding: 5px;
   width: 100%;
@@ -152,7 +146,6 @@ h1 {
 }
 
 /* PROJECT GRID */
-
 .projects {
   display: grid;
   grid-template-columns: repeat(2, 440px);
@@ -162,7 +155,6 @@ h1 {
 }
 
 /* PROJECT CARDS */
-
 .ipo,
 .organic-products,
 .Perfume,
@@ -172,7 +164,8 @@ h1 {
 .ngo,
 .movie-app,
 .site,
-.responsive-Page {
+.responsive-Page,
+.real-estate {
   width: 400px;
   max-width: 100%;
   height: 400px;
@@ -199,13 +192,13 @@ h1 {
   .ngo:hover,
   .movie-app:hover,
   .site:hover,
-  .responsive-Page:hover {
+  .responsive-Page:hover,
+  .real-estate:hover {
     transform: translateY(-5px);
   }
 }
 
 /* PROJECT BACKGROUNDS */
-
 .ipo {
   background-image: url("images/dangote-refinery.jpg");
 }
@@ -246,35 +239,31 @@ h1 {
   background-image: url("images/Screenshot (215).png");
 }
 
-/* PROJECT CARD CONTENT */
+.real-estate {
+  background-image: url("images/forum.webp");
+}
 
+/* PROJECT CARD CONTENT */
 .text {
   position: absolute;
   height: 65px;
   width: 100%;
   left: 0;
   bottom: 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgb(8 22 38 / 98%) 0%,
-      rgb(15 43 66 / 97%) 50%,
-      rgb(19 61 82 / 97%) 100%
-    );
-
+  background: linear-gradient(
+    135deg,
+    rgb(8 22 38 / 98%) 0%,
+    rgb(15 43 66 / 97%) 50%,
+    rgb(19 61 82 / 97%) 100%
+  );
   color: white;
   overflow: hidden;
-
   transition:
     height 0.2s ease,
     background 0.2s ease;
-
   padding: 20px;
   text-align: center;
-
   border-top: 1px solid rgb(105 210 255 / 35%);
-
   box-shadow:
     0 -10px 30px rgb(0 0 0 / 25%),
     inset 0 1px 0 rgb(255 255 255 / 8%);
@@ -282,14 +271,12 @@ h1 {
 
 .text:hover {
   height: 190px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgb(7 20 36 / 99%) 0%,
-      rgb(12 48 73 / 98%) 50%,
-      rgb(17 70 94 / 98%) 100%
-    );
+  background: linear-gradient(
+    135deg,
+    rgb(7 20 36 / 99%) 0%,
+    rgb(12 48 73 / 98%) 50%,
+    rgb(17 70 94 / 98%) 100%
+  );
 }
 
 .text h3 {
@@ -306,7 +293,6 @@ h1 {
 }
 
 /* INDIVIDUAL PROJECT EXPANSION HEIGHTS */
-
 .ipo .text:hover {
   height: 235px;
 }
@@ -347,6 +333,12 @@ h1 {
   height: 215px;
 }
 
+/* REAL ESTATE CARD */
+.real-estate .text:hover {
+  height: 255px;
+  padding-bottom: 20px;
+}
+
 .ipo > .text,
 .site > .text {
   padding-bottom: 35px;
@@ -365,27 +357,25 @@ h1 {
 }
 
 /* PROJECT BUTTON */
-
 .text .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   width: 160px;
   height: 48px;
-
   padding: 0;
+
+  /* ONLY BUTTON SPACING: description -> button */
   margin: 24px auto 0;
 
   border: 2px solid #69d2ff;
   border-radius: 10px;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgb(105 210 255 / 12%),
-      rgb(105 210 255 / 5%)
-    );
+  background: linear-gradient(
+    135deg,
+    rgb(105 210 255 / 12%),
+    rgb(105 210 255 / 5%)
+  );
 
   color: white;
   text-align: center;
@@ -406,7 +396,6 @@ h1 {
   background: #69d2ff;
   color: #06131f;
   transform: translateY(-2px);
-
   box-shadow:
     0 8px 22px rgb(105 210 255 / 30%),
     inset 0 1px 0 rgb(255 255 255 / 35%);
@@ -417,29 +406,14 @@ h1 {
 }
 
 /* CONTACT */
-
 .contact {
   width: 100%;
   padding: 86px 20px 64px;
   text-align: center;
-
   background:
-    radial-gradient(
-      circle at 12% 12%,
-      rgb(82 197 255 / 28%),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 88% 76%,
-      rgb(82 197 255 / 18%),
-      transparent 28%
-    ),
-    linear-gradient(
-      135deg,
-      #102236,
-      #173b4a 52%,
-      #162537
-    );
+    radial-gradient(circle at 12% 12%, rgb(82 197 255 / 28%), transparent 30%),
+    radial-gradient(circle at 88% 76%, rgb(82 197 255 / 18%), transparent 28%),
+    linear-gradient(135deg, #102236, #173b4a 52%, #162537);
 }
 
 .contact > p {
@@ -456,23 +430,16 @@ h1 {
 .contact-form {
   width: 100%;
   max-width: 1080px;
-
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-
   gap: 28px;
   margin: 0 auto;
   padding: 30px;
-
   border: 1px solid rgb(255 255 255 / 20%);
   border-radius: 18px;
-
   background: rgb(7 18 31 / 72%);
-
   box-shadow: 0 24px 60px rgb(0 0 0 / 28%);
-
   color: white;
-
   backdrop-filter: blur(14px);
 }
 
@@ -487,17 +454,12 @@ h1 {
   display: block;
   width: 100%;
   max-width: 100%;
-
   border: 1px solid rgb(255 255 255 / 22%);
   border-radius: 10px;
-
   padding: 14px 16px;
-
   background: rgb(255 255 255 / 9%);
   color: white;
-
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 8%);
-
   transition:
     border-color 0.18s ease,
     background-color 0.18s ease,
@@ -523,11 +485,8 @@ h1 {
 .contact input:focus,
 .contact textarea:focus {
   border-color: #69d2ff;
-
   background: rgb(255 255 255 / 15%);
-
-  box-shadow:
-    0 0 0 4px rgb(105 210 255 / 18%);
+  box-shadow: 0 0 0 4px rgb(105 210 255 / 18%);
 }
 
 .message button:focus-visible,
@@ -546,9 +505,7 @@ h1 {
   display: block;
   min-height: 24px;
   margin-bottom: 10px;
-
   color: #ffd7d7;
-
   font-weight: 700;
   text-align: left;
 }
@@ -565,33 +522,18 @@ h1 {
 
 .message button {
   align-self: flex-end;
-
   color: #06131f;
-
   border: 0;
   border-radius: 10px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #87dcff,
-      #4fb9ed
-    );
-
+  background: linear-gradient(135deg, #87dcff, #4fb9ed);
   width: 172px;
   min-height: 48px;
-
   margin-top: 18px;
-
-  box-shadow:
-    0 10px 24px rgb(24 160 216 / 28%);
-
+  box-shadow: 0 10px 24px rgb(24 160 216 / 28%);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: bold;
-
   cursor: pointer;
-
   transition:
     transform 0.18s ease,
     box-shadow 0.18s ease,
@@ -599,66 +541,45 @@ h1 {
 }
 
 .message button:hover {
-  background:
-    linear-gradient(
-      135deg,
-      #c1efff,
-      #67c8f3
-    );
-
+  background: linear-gradient(135deg, #c1efff, #67c8f3);
   color: #06131f;
-
   transform: translateY(-2px);
-
-  box-shadow:
-    0 14px 28px rgb(24 160 216 / 38%);
+  box-shadow: 0 14px 28px rgb(24 160 216 / 38%);
 }
 
 .form-status {
   width: 100%;
   min-height: 24px;
   margin: 14px 0 0;
-
   color: white;
-
   font-weight: 700;
   text-align: right;
 }
 
 /* DIRECT CONTACT */
-
 .direct-contact {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
   gap: 10px;
-
   width: 100%;
   max-width: 1100px;
-
   margin: 34px auto 0;
 }
 
 .direct-contact a {
   min-height: 44px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   border: 2px solid lightblue;
   border-radius: 8px;
-
   padding: 10px 14px;
-
   background: rgb(255 255 255 / 12%);
-
   color: white;
-
   font-weight: 700;
   text-align: center;
-
   transition:
     background-color 0.18s ease,
     color 0.18s ease;
@@ -670,7 +591,6 @@ h1 {
 }
 
 /* FOOTER */
-
 footer {
   min-height: 90px;
   background-color: #1f2027;
@@ -680,10 +600,8 @@ footer .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   min-height: 90px;
   height: auto;
-
   gap: 20px;
 }
 
@@ -692,10 +610,8 @@ footer .container {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-
   gap: 4px;
   font-size: 200%;
-
   margin-left: auto;
 }
 
@@ -711,10 +627,8 @@ footer .container {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-width: 40px;
   min-height: 40px;
-
   color: white;
   border-radius: 6px;
 }
@@ -735,7 +649,6 @@ footer .container {
 }
 
 /* TABLET / TOUCH */
-
 @media (max-width: 900px), (hover: none) and (pointer: coarse) {
   .hero {
     padding-top: calc(var(--nav-height) + 40px);
@@ -805,10 +718,8 @@ footer .container {
     min-height: 100px;
     flex-wrap: wrap;
     justify-content: center;
-
     padding-top: 18px;
     padding-bottom: 18px;
-
     text-align: center;
   }
 
@@ -824,14 +735,11 @@ footer .container {
   }
 
   /* PROJECT CARDS ON TABLET / MOBILE */
-
   .projects {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: 100%;
-
     gap: 30px;
   }
 
@@ -844,17 +752,14 @@ footer .container {
   .ngo,
   .movie-app,
   .site,
-  .responsive-Page {
+  .responsive-Page,
+  .real-estate {
     display: flex;
     flex-direction: column;
-
     width: 92%;
     max-width: 400px;
-
     height: auto;
-
     margin: 0;
-
     background-position: top;
   }
 
@@ -867,31 +772,24 @@ footer .container {
   .ngo::before,
   .movie-app::before,
   .site::before,
-  .responsive-Page::before {
+  .responsive-Page::before,
+  .real-estate::before {
     content: "";
-
     width: 100%;
     height: 220px;
-
     flex-shrink: 0;
-
     background: inherit;
     background-size: cover;
     background-position: center;
-
     display: block;
   }
 
   .text {
     position: static;
-
     width: 100%;
     height: auto;
-
     min-height: 180px;
-
     overflow: visible;
-
     padding: 20px;
   }
 
@@ -901,18 +799,14 @@ footer .container {
 
   .text h3 {
     color: white;
-
     margin-top: 3px;
     margin-bottom: 14px;
   }
 
   .text p {
     color: rgb(255 255 255 / 88%);
-
     margin: 0 auto;
-
     text-align: center;
-
     line-height: 1.5;
   }
 
@@ -920,10 +814,10 @@ footer .container {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     width: 160px;
     height: 48px;
 
+    /* Same description -> button spacing on mobile */
     margin: 24px auto 0;
   }
 
@@ -936,13 +830,13 @@ footer .container {
   .grad .text:hover,
   .calculator .text:hover,
   .responsive-Page .text:hover,
-  .ngo .text:hover {
+  .ngo .text:hover,
+  .real-estate .text:hover {
     height: auto;
   }
 }
 
 /* MOBILE NAVIGATION */
-
 @media (max-width: 640px) {
   nav {
     justify-content: flex-start;
@@ -953,33 +847,23 @@ footer .container {
     position: absolute;
     top: 12px;
     right: 16px;
-
     z-index: 2;
-
     display: grid;
-
     width: 46px;
     height: 46px;
-
     align-content: center;
     justify-items: center;
-
     gap: 5px;
-
     border: 1px solid rgb(255 255 255 / 55%);
     border-radius: 6px;
-
     background: transparent;
-
     cursor: pointer;
   }
 
   nav .nav-toggle span {
     width: 22px;
     height: 2px;
-
     background: #fff;
-
     transition:
       transform 180ms ease,
       opacity 180ms ease;
@@ -987,12 +871,9 @@ footer .container {
 
   nav ul {
     display: none;
-
     width: 100%;
-
     flex-direction: column;
     align-items: stretch;
-
     padding: 68px 16px 12px;
   }
 
@@ -1003,9 +884,7 @@ footer .container {
   nav ul li a {
     width: 100%;
     min-height: 44px;
-
     justify-content: flex-start;
-
     padding: 10px 12px;
   }
 
@@ -1027,26 +906,20 @@ footer .container {
 
   .contact > p {
     width: 100%;
-
     margin-bottom: 28px;
-
     line-height: 1.6;
   }
 
   .contact-form {
     width: 100%;
-
     gap: 20px;
-
     padding: 18px;
-
     border-radius: 14px;
   }
 
   .contact-details input,
   .message textarea {
     width: 100%;
-
     font-size: 16px;
   }
 
@@ -1057,7 +930,6 @@ footer .container {
   .message button {
     width: 100%;
     max-width: 172px;
-
     align-self: center;
   }
 
@@ -1068,21 +940,15 @@ footer .container {
   .direct-contact {
     flex-direction: column;
     align-items: stretch;
-
     gap: 10px;
-
     width: 100%;
-
     margin-top: 24px;
-
     padding: 0;
   }
 
   .direct-contact a {
     width: 100%;
-
     min-height: 46px;
-
     padding: 10px 12px;
   }
 
@@ -1092,33 +958,23 @@ footer .container {
 
   footer .container {
     min-height: 150px;
-
     flex-direction: column;
-
     justify-content: center;
-
     gap: 14px;
-
     padding: 20px 15px;
   }
 
   .stud {
     width: 100%;
-
     line-height: 1.5;
-
     text-align: center;
   }
 
   .social-media {
     width: 100%;
-
     justify-content: center;
-
     gap: 5px;
-
     font-size: 170%;
-
     margin: 0;
   }
 
@@ -1134,7 +990,6 @@ footer .container {
 }
 
 /* VERY SMALL SCREENS */
-
 @media (max-width: 380px) {
   .contact {
     padding-left: 8px;
@@ -1167,7 +1022,6 @@ footer .container {
 }
 
 /* REDUCED MOTION */
-
 @media (prefers-reduced-motion: reduce) {
   nav .nav-toggle span {
     transition: none;
