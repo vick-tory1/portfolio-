@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home: Welcome To Adams Frangrance World Wide</title>
+  <title>Fragrance Formats | Heavenly Fragrance</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
   <a href="../index.html" style="position:fixed;top:16px;left:16px;background:#222;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;z-index:9999;font-family: sans-serif;">← Back to Portfolio</a>
@@ -13,77 +14,86 @@
   </div>
 
   <div id="navigation-container">
-    <div id="main-navigation">
-      <h2><a href="ass.html">Home</a></h2>
-      <h2><a href="about.html">About</a></h2>
-      <h2><a href="gallery.html">Gallery</a></h2>
-      <h2><a href="blog.html">Blog</a></h2>
-      <h2><a href="register.html">Register</a></h2>
-      <h2><a href="branches.html">Branches</a></h2>
-    </div>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <button class="menu-toggle" type="button" aria-controls="main-navigation-links" aria-expanded="false" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div id="main-navigation-links">
+        <h2><a href="ass.html">Home</a></h2>
+        <h2><a href="about.html">About</a></h2>
+        <h2><a href="gallery.html">Gallery</a></h2>
+        <h2><a href="blog.html">Blog</a></h2>
+        <h2><a href="register.html">Register</a></h2>
+        <h2><a href="branches.html">Branches</a></h2>
+      </div>
+    </nav>
   </div>
 
   <div id="headline-container">
-    <div id="main-headline">
-      <marquee behavior="" direction="">Luxury Fragrances Delivered to Your Door • Discover Premium Perfumes for Men & Women • Exclusive Designer Scents • Long-Lasting Eau de Parfum Collections • Shop Best-Selling Arabic Oud, Floral, Fresh & Woody Notes • Limited-Time Offers Available Now • Up to 30% Off Selected Fragrances • Authentic Perfumes Only • Worldwide Shipping • New Arrivals Weekly • Find Your Signature Scent Today • Elegant Gift Sets for Every Occasion • Affordable Luxury for Every Style • Shop Top Brands in One Place • Experience Confidence Through Fragrance • Customer Favorites Back in Stock • Fast Delivery • Secure Checkout • Smell Expensive, Feel Unforgettable • Premium Perfume Oils & Sprays • Seasonal Collections Now Live • Special Discounts for First-Time Buyers • Indulge in Timeless Scents • Luxury You Can Wear Every Day • Shop Now and Elevate Your Presence • Fragrance That Leaves a Lasting Impression • Exclusive Deals Ending Soon • Explore Our Signature Perfume Collection Today</marquee>
-    </div>
+    <div id="main-headline"><marquee class="fragrance-marquee" aria-label="Fragrance news and collection highlights">Luxury Fragrances Delivered to Your Door • Discover Premium Perfumes for Men & Women • Exclusive Designer Scents • Long-Lasting Eau de Parfum Collections • Shop Best-Selling Arabic Oud, Floral, Fresh & Woody Notes • Limited-Time Offers Available Now • Up to 30% Off Selected Fragrances • Authentic Perfumes Only • Worldwide Shipping • New Arrivals Weekly • Find Your Signature Scent Today • Elegant Gift Sets for Every Occasion • Affordable Luxury for Every Style • Shop Top Brands in One Place • Experience Confidence Through Fragrance • Customer Favorites Back in Stock • Fast Delivery • Secure Checkout • Smell Expensive, Feel Unforgettable • Premium Perfume Oils & Sprays • Seasonal Collections Now Live • Special Discounts for First-Time Buyers • Indulge in Timeless Scents • Luxury You Can Wear Every Day • Shop Now and Elevate Your Presence • Fragrance That Leaves a Lasting Impression • Exclusive Deals Ending Soon • Explore Our Signature Perfume Collection Today</marquee></div>
   </div>
 
   <div id="content-container">
+    <section class="page-intro">
+      <h1>Find a fragrance format that fits your day</h1>
+      <p>Explore different ways to wear fragrance, from a classic perfume to a quick-refresh body mist. Each format offers a different application style, so choose what feels comfortable for you.</p>
+    </section>
     <div class="about">
       <div class="about-picture">
-        <img src="images/perfumes/blue.jpg" alt="">
+        <img src="images/perfumes/blue.jpg" alt="Blue perfume bottle from the fragrance collection">
       </div>
       <h1>Perfume:</h1>
-      <p>Perfumes contain a higher concentration of fragrance oils, resulting in a more intense and enduring scent. </p>
+      <p>Explore classic spray fragrances in a range of scent profiles and strengths. Read each product description to find the character that suits your plans.</p>
       <a href="perfume.html">Read More</a>
     </div>
     <div class="about">
       <div class="about-picture">
-        <img src="images/perfumes/main.jpg" alt="">
+        <img src="images/perfumes/main.jpg" alt="Body spray from the fragrance collection">
       </div>
       <h1>Body Spray:</h1>
-      <p>Low concentration of fragrance oils, often mixed with alcohol and water.  </p>
+      <p>A light, convenient format for an easy refresh during the day. Follow the product label for directions on where and how to apply it.</p>
       <a href="bodyspray.html">Read More</a>
     </div>
     <div class="about">
       <div class="about-picture">
-        <img src="images/perfumes/oilperfume.jpg" alt="">
+        <img src="images/perfumes/oilperfume.jpg" alt="Perfume oil bottle">
       </div>
       <h1>Perfume Oil:</h1>
-      <p>High concentration of fragrance oils, often without alcohol.  </p>
+      <p>Perfume oils offer a close-to-skin way to wear fragrance. Formulas vary, so check each product's ingredients and directions.</p>
       <a href="perfumeoil.html">Read More</a>
     </div>
     <div class="about">
       <div class="about-picture">
-        <img src="images/perfumes/cologne.jpg" alt="">
+        <img src="images/perfumes/bodymist.jpg" alt="Body mist from the fragrance collection">
       </div>
       <h1>Body Mist:</h1>
-      <p>Similar to body sprays but with a slightly higher concentration of fragrance.  </p>
+      <p>Body mist is a breezy option for everyday wear. Choose a scent you enjoy and refresh as needed, following the bottle's directions.</p>
       <a href="bodymist.html">Read More</a>
     </div>
     <div class="about">
       <div class="about-picture">
-        <img src="images/perfumes/bodymist.jpg" alt="">
+        <img src="images/perfumes/cologne.jpg" alt="Cologne from the fragrance collection">
       </div>
       <h1>Cologne:</h1>
-      <p>Typically a lighter concentration of fragrance, often marketed towards men.  </p>
+      <p>Cologne covers a broad range of fragrance styles. Compare the notes and product details to find a fresh, aromatic, woody or warm profile.</p>
       <a href="cologne.html">Read More</a>
     </div>
     <div class="about">
       <div class="about-picture">
-        <img src="images/perfumes/rollon.jpg" alt="">
+        <img src="images/perfumes/rollon.jpg" alt="Roll-on fragrance applicator">
       </div>
       <h1>Roll-on:</h1>
-      <p>Typically a type of fragrance (often perfume oil or EDT) applied using a rollerball applicator, offering a precise and targeted application. </p>
+      <p>A rollerball makes targeted application simple and portable. Apply a small amount to clean skin and keep the applicator cap closed between uses.</p>
       <a href="rollon.html">Read More</a>
     </div>
     <div class="about">
       <div class="about-picture">
-        <img src="images/perfumes/deordirant.jpg" alt="">
+        <img src="images/perfumes/deordirant.jpg" alt="Deodorant product from the collection">
       </div>
       <h1>Deodorants and Anti-perspirants:</h1>
-      <p>While not strictly fragrances, they are often used in conjunction with them. Deodorants mask body odor, while anti-perspirants reduce sweating.  </p>
+      <p>Deodorants and antiperspirants serve different purposes. Check the label to understand each product's use and ingredients before adding it to your routine.</p>
       <a href="deodorant.html">Read More</a>
     </div>
   </div><!--end of content container-->
@@ -91,42 +101,27 @@
   <div id="footer-container">
     <div id="footer-top">
       <div class="footer-info">
-        <h1>Latest Tweets</h1>
-        <p><a href="#">Saturday, 14th June 2025</a><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptates obcaecati deleniti.</p>
-        
-        <p><a href="#">Friday, 13th June 2025</a><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aut voluptates ipsum!</p>
-
-        <p><a href="#">Thursday, 12th June 2025</a><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem facere neque reiciendis!</p>
+        <h1>Fragrance Notes</h1>
+        <p><strong>Finding your scent</strong><br>Start with fragrance families you already enjoy, then explore one new note at a time.</p>
+        <p><strong>Applying fragrance</strong><br>Begin with a light application on clean skin and follow the directions on the product label.</p>
+        <p><strong>Storing your collection</strong><br>Keep bottles away from direct sunlight, heat and humidity to help preserve their character.</p>
       </div>
       <div class="footer-info">
-        <h1>Connect With Us</h1>
-
-        <div class="social" style="margin-top: 15px;">
-          <div class="social-icon"><img src="images/logo/social_icons.png" alt=""></div>
-          <p>Facebook: <br><a href="#" style="color: #075b07;">+50,000,000</a></p>
-        </div>
-
-        <div class="social">
-          <div class="social-icon"><img src="images/logo/social_icons2.png" alt=""></div>
-          <p>Twitter: <br><a href="#" style="color: #0b590b;">+50,000,000</a></p>
-        </div>
-        
-        <div class="social">
-          <div class="social-icon"><img src="images/logo/social_icons3.png" alt=""></div>
-          <p>RSS: <br><a href="#" style="color: #0b590b;">+50,000,000</a></p>
-        </div>
+        <h1>Get in touch</h1>
+        <p>Need help choosing a fragrance or finding a branch? Our team can help.</p>
+        <p><a href="mailto:info@adamsfragrance.com">Email our team</a></p>
+        <p><a href="tel:+2349057920012">Call 09057920012</a></p>
       </div>
-      
       <div class="footer-info">
         <h1>Business Timings</h1>
         <strong>        <ul style="font-size: 16px; margin-top: 15px;">
-          <li>Monday: <a href="#">9am-9pm</a></li>
-          <li>Tuesday: <a href="#">9am-9pm</a></li>
-          <li>Wednesday: <a href="#">9am-9pm</a></li>
-          <li>Thursday: <a href="#">9am-9pm</a></li>
-          <li>Friday: <a href="#">9am-9pm</a></li>
-          <li>Saturday: <a href="#">9am-9pm</a></li>
-          <li>Sunday: <a href="#">9am-5pm</a></li>
+          <li>Monday: 9am-9pm</li>
+          <li>Tuesday: 9am-9pm</li>
+          <li>Wednesday: 9am-9pm</li>
+          <li>Thursday: 9am-9pm</li>
+          <li>Friday: 9am-9pm</li>
+          <li>Saturday: 9am-9pm</li>
+          <li>Sunday: 9am-5pm</li>
         </ul></strong>
       </div>
       <div class="footer-info">
@@ -138,8 +133,10 @@
       </div>
     </div>
     <div id="footer-bottom">
-      <p>copyright &copy; Adams Ekpe 2025 |All Rights Reserved | Designed by <a href="#">Vicktory AKA YHWH's Chosen ❤❤❤</a></p>
+      <p>copyright &copy; Adams Ekpe 2025 |All Rights Reserved | Designed by Vicktory AKA YHWH's Chosen ❤❤❤</p>
     </div>
   </div>
+  <script src="nav.js"></script>
+  <script src="../author-bio.js"></script>
 </body>
 </html>

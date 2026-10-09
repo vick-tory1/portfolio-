@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home: Welcome To Adams Frangrance World Wide</title>
+  <title>Branches | Heavenly Fragrance</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
   <a href="../index.html" style="position:fixed;top:16px;left:16px;background:#222;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;z-index:9999;font-family: sans-serif;">← Back to Portfolio</a>
@@ -13,95 +14,103 @@
   </div>
 
   <div id="navigation-container">
-    <div id="main-navigation">
-      <h2><a href="ass.html">Home</a></h2>
-      <h2><a href="about.html">About</a></h2>
-      <h2><a href="gallery.html">Gallery</a></h2>
-      <h2><a href="blog.html">Blog</a></h2>
-      <h2><a href="register.html">Register</a></h2>
-      <h2><a href="branches.html">Branches</a></h2>
-    </div>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <button class="menu-toggle" type="button" aria-controls="main-navigation-links" aria-expanded="false" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div id="main-navigation-links">
+        <h2><a href="ass.html">Home</a></h2>
+        <h2><a href="about.html">About</a></h2>
+        <h2><a href="gallery.html">Gallery</a></h2>
+        <h2><a href="blog.html">Blog</a></h2>
+        <h2><a href="register.html">Register</a></h2>
+        <h2><a href="branches.html">Branches</a></h2>
+      </div>
+    </nav>
   </div>
 
   <div id="headline-container">
-    <div id="main-headline">
-      <marquee behavior="" direction="">Luxury Fragrances Delivered to Your Door • Discover Premium Perfumes for Men & Women • Exclusive Designer Scents • Long-Lasting Eau de Parfum Collections • Shop Best-Selling Arabic Oud, Floral, Fresh & Woody Notes • Limited-Time Offers Available Now • Up to 30% Off Selected Fragrances • Authentic Perfumes Only • Worldwide Shipping • New Arrivals Weekly • Find Your Signature Scent Today • Elegant Gift Sets for Every Occasion • Affordable Luxury for Every Style • Shop Top Brands in One Place • Experience Confidence Through Fragrance • Customer Favorites Back in Stock • Fast Delivery • Secure Checkout • Smell Expensive, Feel Unforgettable • Premium Perfume Oils & Sprays • Seasonal Collections Now Live • Special Discounts for First-Time Buyers • Indulge in Timeless Scents • Luxury You Can Wear Every Day • Shop Now and Elevate Your Presence • Fragrance That Leaves a Lasting Impression • Exclusive Deals Ending Soon • Explore Our Signature Perfume Collection Today</marquee>
-    </div>
+    <div id="main-headline"><marquee class="fragrance-marquee" aria-label="Fragrance news and collection highlights">Luxury Fragrances Delivered to Your Door • Discover Premium Perfumes for Men & Women • Exclusive Designer Scents • Long-Lasting Eau de Parfum Collections • Shop Best-Selling Arabic Oud, Floral, Fresh & Woody Notes • Limited-Time Offers Available Now • Up to 30% Off Selected Fragrances • Authentic Perfumes Only • Worldwide Shipping • New Arrivals Weekly • Find Your Signature Scent Today • Elegant Gift Sets for Every Occasion • Affordable Luxury for Every Style • Shop Top Brands in One Place • Experience Confidence Through Fragrance • Customer Favorites Back in Stock • Fast Delivery • Secure Checkout • Smell Expensive, Feel Unforgettable • Premium Perfume Oils & Sprays • Seasonal Collections Now Live • Special Discounts for First-Time Buyers • Indulge in Timeless Scents • Luxury You Can Wear Every Day • Shop Now and Elevate Your Presence • Fragrance That Leaves a Lasting Impression • Exclusive Deals Ending Soon • Explore Our Signature Perfume Collection Today</marquee></div>
   </div>
 
   <div id="content-container">
     <div id="branches">
-      <table>
+      <h1>Visit or contact a branch</h1>
+      <p>Choose the branch nearest you, then call or email the team for help. Some locations need address confirmation, so please call ahead before visiting.</p>
+      <table aria-label="Branch locations and contact details">
         <tr>
-          <th>Branch</th>
-          <th>Address</th>
-          <th>Phone Number</th>
-          <th>Email</th>
+          <th scope="col">Branch</th>
+          <th scope="col">Address</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Email</th>
       </tr>
       <tr>
-        <td>Iyana-Ipaja</td>
-        <td>plot 10 Shagari Estate Ipaja,Lagos</td>
-        <td>09057920012</td>
-        <td><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
+        <td data-label="Branch">Iyana-Ipaja</td>
+        <td data-label="Address">Plot 10 Shagari Estate, Ipaja, Lagos</td>
+        <td data-label="Phone"><a href="tel:+2349057920012">09057920012</a></td>
+        <td data-label="Email"><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
       </tr>
       <tr>
-        <td>Ikeja</td>
-        <td>No. 40,Adeniyi Jones,Lagos State</td>
-        <td>09057920012</td>
-        <td><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
+        <td data-label="Branch">Ikeja</td>
+        <td data-label="Address">No. 40, Adeniyi Jones, Lagos State</td>
+        <td data-label="Phone"><a href="tel:+2349057920012">09057920012</a></td>
+        <td data-label="Email"><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
       </tr>
       <tr>
-        <td>imo</td>
-        <td>SomeWhere in Imo,Imo State🤷‍♀️</td>
-        <td>09057920012</td>
-        <td><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
+        <td data-label="Branch">Imo</td>
+        <td data-label="Address">Please call to confirm the current address</td>
+        <td data-label="Phone"><a href="tel:+2349057920012">09057920012</a></td>
+        <td data-label="Email"><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
       </tr>
       <tr>
-        <td>Edo State</td>
-        <td>Sapale road off dangote bus stop,Edo State</td>
-        <td>09057920012</td>
-        <td><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
+        <td data-label="Branch">Edo State</td>
+        <td data-label="Address">Sapele Road, off Dangote Bus Stop, Edo State</td>
+        <td data-label="Phone"><a href="tel:+2349057920012">09057920012</a></td>
+        <td data-label="Email"><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
       </tr>
       <tr>
-        <td>Ikotun</td>
-        <td>SomeWhere in Ikotun,Lagos State</td>
-        <td>09057920012</td>
-        <td><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
+        <td data-label="Branch">Ikotun</td>
+        <td data-label="Address">Please call to confirm the current address</td>
+        <td data-label="Phone"><a href="tel:+2349057920012">09057920012</a></td>
+        <td data-label="Email"><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
       </tr>
       <tr>
-        <td>Ikorodu</td>
-        <td>SomeWhere in Ikorodu,Lagos State🤷‍♀️</td>
-        <td>09057920012</td>
-        <td><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
+        <td data-label="Branch">Ikorodu</td>
+        <td data-label="Address">Please call to confirm the current address</td>
+        <td data-label="Phone"><a href="tel:+2349057920012">09057920012</a></td>
+        <td data-label="Email"><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
       </tr>
       <tr>
-        <td>Abuja</td>
-        <td>SomeWhere in Gwaripa, FCT, Abuja</td>
-        <td>09057920012</td>
-        <td><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
+        <td data-label="Branch">Abuja</td>
+        <td data-label="Address">Please call to confirm the current address</td>
+        <td data-label="Phone"><a href="tel:+2349057920012">09057920012</a></td>
+        <td data-label="Email"><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
       </tr>
       <tr>
-        <td>Port-Harcourt</td>
-        <td>SomeWhere in Choba, Port-Harcourt</td>
-        <td>09057920012</td>
-        <td><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
+        <td data-label="Branch">Port-Harcourt</td>
+        <td data-label="Address">Please call to confirm the current address</td>
+        <td data-label="Phone"><a href="tel:+2349057920012">09057920012</a></td>
+        <td data-label="Email"><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
       </tr>
       <tr>
-        <td>Edo State</td>
-        <td>SomeWhere in Auchi, Edo State</td>
-        <td>09057920012</td>
-        <td><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
-      </tr>
-        <td>Asaba</td>
-        <td>SomeWhere in Asaba, Delta State</td>
-        <td>09057920012</td>
-        <td><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
+        <td data-label="Branch">Auchi</td>
+        <td data-label="Address">Please call to confirm the current address</td>
+        <td data-label="Phone"><a href="tel:+2349057920012">09057920012</a></td>
+        <td data-label="Email"><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
       </tr>
       <tr>
-        <td>Warri</td>
-        <td>SomeWhere in Warri, Delta State </td>
-        <td>09057920012</td>
-        <td><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
+        <td data-label="Branch">Asaba</td>
+        <td data-label="Address">Please call to confirm the current address</td>
+        <td data-label="Phone"><a href="tel:+2349057920012">09057920012</a></td>
+        <td data-label="Email"><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
+      </tr>
+      <tr>
+        <td data-label="Branch">Warri</td>
+        <td data-label="Address">Please call to confirm the current address</td>
+        <td data-label="Phone"><a href="tel:+2349057920012">09057920012</a></td>
+        <td data-label="Email"><a href="mailto:avicktory@gmail.com">avicktory@gmail.com</a></td>
       </tr>
     </table>
     </div>
@@ -110,42 +119,27 @@
   <div id="footer-container">
     <div id="footer-top">
       <div class="footer-info">
-        <h1>Latest Tweets</h1>
-        <p><a href="#">Saturday, 14th June 2025</a><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est voluptates obcaecati deleniti.</p>
-        
-        <p><a href="#">Friday, 13th June 2025</a><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aut voluptates ipsum!</p>
-
-        <p><a href="#">Thursday, 12th June 2025</a><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem facere neque reiciendis!</p>
+        <h1>Fragrance Notes</h1>
+        <p><strong>Finding your scent</strong><br>Start with fragrance families you already enjoy, then explore one new note at a time.</p>
+        <p><strong>Applying fragrance</strong><br>Begin with a light application on clean skin and follow the directions on the product label.</p>
+        <p><strong>Storing your collection</strong><br>Keep bottles away from direct sunlight, heat and humidity to help preserve their character.</p>
       </div>
       <div class="footer-info">
-        <h1>Connect With Us</h1>
-
-        <div class="social" style="margin-top: 15px;">
-          <div class="social-icon"><img src="images/logo/social_icons.png" alt=""></div>
-          <p>Facebook: <br><a href="#" style="color: #075b07;">+50,000,000</a></p>
-        </div>
-
-        <div class="social">
-          <div class="social-icon"><img src="images/logo/social_icons2.png" alt=""></div>
-          <p>Twitter: <br><a href="#" style="color: #0b590b;">+50,000,000</a></p>
-        </div>
-        
-        <div class="social">
-          <div class="social-icon"><img src="images/logo/social_icons3.png" alt=""></div>
-          <p>RSS: <br><a href="#" style="color: #0b590b;">+50,000,000</a></p>
-        </div>
+        <h1>Get in touch</h1>
+        <p>Need help choosing a fragrance or finding a branch? Our team can help.</p>
+        <p><a href="mailto:info@adamsfragrance.com">Email our team</a></p>
+        <p><a href="tel:+2349057920012">Call 09057920012</a></p>
       </div>
-      
       <div class="footer-info">
         <h1>Business Timings</h1>
         <strong>        <ul style="font-size: 16px; margin-top: 15px;">
-          <li>Monday: <a href="#">9am-9pm</a></li>
-          <li>Tuesday: <a href="#">9am-9pm</a></li>
-          <li>Wednesday: <a href="#">9am-9pm</a></li>
-          <li>Thursday: <a href="#">9am-9pm</a></li>
-          <li>Friday: <a href="#">9am-9pm</a></li>
-          <li>Saturday: <a href="#">9am-9pm</a></li>
-          <li>Sunday: <a href="#">9am-5pm</a></li>
+          <li>Monday: 9am-9pm</li>
+          <li>Tuesday: 9am-9pm</li>
+          <li>Wednesday: 9am-9pm</li>
+          <li>Thursday: 9am-9pm</li>
+          <li>Friday: 9am-9pm</li>
+          <li>Saturday: 9am-9pm</li>
+          <li>Sunday: 9am-5pm</li>
         </ul></strong>
       </div>
       <div class="footer-info">
@@ -157,8 +151,10 @@
       </div>
     </div>
     <div id="footer-bottom">
-      <p>copyright &copy; Adams Ekpe 2025 |All Rights Reserved | Designed by <a href="#">Vicktory AKA YHWH's Chosen ❤❤❤</a></p>
+      <p>copyright &copy; Adams Ekpe 2025 |All Rights Reserved | Designed by Vicktory AKA YHWH's Chosen ❤❤❤</p>
     </div>
   </div>
+  <script src="nav.js"></script>
+  <script src="../author-bio.js"></script>
 </body>
 </html>
