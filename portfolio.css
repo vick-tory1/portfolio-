@@ -159,7 +159,7 @@ h1 {
 .organic-products,
 .Perfume,
 .ecom,
-.grad,
+.leadflow,
 .gadget,
 .ngo,
 .movie-app,
@@ -188,7 +188,7 @@ h1 {
   .organic-products:hover,
   .Perfume:hover,
   .ecom:hover,
-  .grad:hover,
+  .leadflow:hover,
   .gadget:hover,
   .ngo:hover,
   .movie-app:hover,
@@ -217,8 +217,8 @@ h1 {
   background-image: url("images/IMG-20250902-WA0006.jpg");
 }
 
-.grad {
-  background-image: url("images/grading js.jpg");
+.leadflow {
+  background-image: url("images/job-seeker-tech.gif");
 }
 
 .gadget {
@@ -323,8 +323,8 @@ h1 {
   height: 210px;
 }
 
-.grad .text:hover {
-  height: 210px;
+.leadflow .text:hover {
+  height: 230px;
 }
 
 .gadget .text:hover {
@@ -840,7 +840,7 @@ footer .container {
   .organic-products .text:hover,
   .Perfume .text:hover,
   .ecom .text:hover,
-  .grad .text:hover,
+  .leadflow .text:hover,
   .gadget .text:hover,
   .responsive-Page .text:hover,
   .ngo .text:hover,
